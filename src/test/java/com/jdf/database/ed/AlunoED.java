@@ -1,48 +1,25 @@
 package com.jdf.database.ed;
 
+import com.jdf.swing.helper.jtable.ColumnMetadataAlign;
+import com.jdf.swing.helper.jtable.ColumnMetadataFormat;
+import com.jdf.swing.helper.jtable.JTableColumnMetadata;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-import javax.persistence.Transient;
-
-import com.jdf.swing.helper.jtable.ColumnMetadataAlign;
-import com.jdf.swing.helper.jtable.ColumnMetadataFormat;
-import com.jdf.swing.helper.jtable.JTableColumnMetadata;
-
-@Entity
-@Table(name="aluno")
 public class AlunoED implements Serializable {
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	@JTableColumnMetadata(name="ID", size=35, align=ColumnMetadataAlign.CENTER)
 	private Integer id;
 	
 	@JTableColumnMetadata(name="Nome do Aluno")
 	private String nome;
 	
-	@ManyToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
-	@JoinTable(name="aluno_turma",
-			joinColumns=@JoinColumn(name="aluno_id"),
-			inverseJoinColumns=@JoinColumn(name="turma_id"))
 	private Collection<TurmaED> listaTurmas;
 	
-	@Transient
 	@JTableColumnMetadata(name = "Salário", size = 80, format = ColumnMetadataFormat.CURRENCY, align=ColumnMetadataAlign.RIGHT)
 	private Double salario;
 
-	@Transient
 	@JTableColumnMetadata(name = "Dt.Nasc.", size = 120, format = ColumnMetadataFormat.DATE_MM_YYYY, align=ColumnMetadataAlign.CENTER)
 	private Date dtNascimento;
 

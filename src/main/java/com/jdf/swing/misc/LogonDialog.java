@@ -1,20 +1,18 @@
 package com.jdf.swing.misc;
 
+import com.jdf.swing.helper.JDialogHelper;
+import com.jdf.swing.helper.JOptionPaneHelper;
+import com.jdf.swing.iface.IconPackBase64;
+import com.jdf.swing.iface.JDFDefaultImages;
+import com.jdf.swing.iface.JDFMessageException;
+import com.jdf.util.Propriedades;
 import java.awt.BorderLayout;
 import java.awt.Graphics;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
 import javax.swing.JPanel;
-
-import com.jdf.swing.helper.JDialogHelper;
-import com.jdf.swing.helper.JOptionPaneHelper;
-import com.jdf.swing.iface.IconPackBase64;
-import com.jdf.swing.iface.JDFDefaultImages;
-import com.jdf.swing.iface.JDFMessageException;
-import com.jdf.util.JDFProperties;
 
 /**
  * Tela padrão para logon no sistema
@@ -43,7 +41,7 @@ public class LogonDialog extends javax.swing.JDialog {
         // configura janela
         JDialogHelper jdh = new JDialogHelper(this);
         jdh.setIcon(IconPackBase64.SHIELD);
-        jdh.setTitle(JDFProperties.getInstance().get("sistema.titulo.login"));
+        jdh.setTitle(Propriedades.getInstance().get("sistema.titulo.login"));
         jdh.centerFrame();
 
         // adiciona painel de login

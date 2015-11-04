@@ -11,11 +11,9 @@
 
 package com.jdf.swing.helper;
 
-import com.jdf.swing.helper.JFrameHelper;
-import com.jdf.swing.helper.JOptionPaneHelper;
-import com.jdf.swing.helper.JToolBarHelper;
 import com.jdf.swing.iface.IconPackBase64;
-import com.jdf.util.JDFProperties;
+import com.jdf.util.Propriedades;
+
 
 /**
  *
@@ -44,7 +42,7 @@ public class TesteJToolBar extends javax.swing.JFrame {
         JFrameHelper jh = new JFrameHelper(this);
         jh.setIcon(IconPackBase64.APPLICATION_FORM);
         jh.setMediumSize();
-        jh.setTitle(JDFProperties.getInstance().get("sistema.titulo"));
+        jh.setTitle(Propriedades.getInstance().get("sistema.titulo"));
         jh.centerFrame();
     }
 

@@ -11,23 +11,14 @@
 
 package com.jdf.swing.helper;
 
+import com.jdf.database.ed.AlunoED;
+import com.jdf.swing.iface.IconPackBase64;
+import com.jdf.util.Propriedades;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.swing.JPopupMenu;
-
-import com.jdf.database.ed.AlunoED;
-import com.jdf.swing.helper.JButtonHelper;
-import com.jdf.swing.helper.JComboBoxHelper;
-import com.jdf.swing.helper.JFrameHelper;
-import com.jdf.swing.helper.JLabelHelper;
-import com.jdf.swing.helper.JListHelper;
-import com.jdf.swing.helper.JOptionPaneHelper;
-import com.jdf.swing.helper.JPopupMenuHelper;
-import com.jdf.swing.iface.IconPackBase64;
-import com.jdf.util.JDFProperties;
 
 /**
  *
@@ -43,7 +34,7 @@ public class ComponentesTela extends javax.swing.JFrame {
         JFrameHelper jfh = new JFrameHelper(this);
         jfh.setBigSize();
         jfh.setIcon(IconPackBase64.BOMB);
-        jfh.setTitle(JDFProperties.getInstance().get("sistema.titulo"));
+        jfh.setTitle(Propriedades.getInstance().get("sistema.titulo"));
         jfh.centerFrame();
         
         // formata botões

@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Created-By: Rafael Lossurdo - lossurdo@gmail.com
-Main-Class: testing.toolbar.TesteToolbar

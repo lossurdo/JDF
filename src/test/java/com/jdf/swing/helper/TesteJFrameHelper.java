@@ -1,11 +1,9 @@
 package com.jdf.swing.helper;
 
-import javax.swing.JFrame;
-
-import com.jdf.swing.helper.JFrameHelper;
 import com.jdf.swing.iface.IconPackBase64;
 import com.jdf.swing.misc.SplashScreen;
-import com.jdf.util.JDFProperties;
+import com.jdf.util.Propriedades;
+import javax.swing.JFrame;
 
 public class TesteJFrameHelper extends JFrame {
 
@@ -19,7 +17,7 @@ public class TesteJFrameHelper extends JFrame {
 		j.setHugeSize();
 		j.centerFrame();
 		j.setExitOnClose();
-		j.setTitle(JDFProperties.getInstance().get("sistema.titulo"));
+		j.setTitle(Propriedades.getInstance().get("sistema.titulo"));
 		setVisible(true);
 		
 		splash.cancelExibition();
