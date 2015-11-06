@@ -11,17 +11,11 @@
 
 package com.jdf.swing.helper.jtable;
 
-import java.awt.Component;
+import com.jdf.database.bean.Aluno;
+import com.jdf.swing.helper.JOptionPaneHelper;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
-import javax.swing.JTable;
-import javax.swing.table.TableCellRenderer;
-
-import com.jdf.database.ed.AlunoED;
-import com.jdf.swing.helper.JOptionPaneHelper;
-import com.jdf.swing.helper.jtable.JTableHelper;
 
 /**
  *
@@ -29,22 +23,21 @@ import com.jdf.swing.helper.jtable.JTableHelper;
  */
 public class TesteJTable extends javax.swing.JFrame {
 
-    private JTableHelper<AlunoED> th;
+    private JTableHelper<Aluno> th;
 
     public TesteJTable() {
         initComponents();
 
 
-        List<AlunoED> lista = new ArrayList<AlunoED>();
-        lista.add(new AlunoED(1, "Rafael", 5000.00, Calendar.getInstance().getTime()));
-        lista.add(new AlunoED(2, "Queisi", 6000.00, Calendar.getInstance().getTime()));
-        lista.add(new AlunoED(3, "Priscilla", 3000.00, Calendar.getInstance().getTime()));
-        lista.add(new AlunoED(4, "Ana Cláudia", 1245.67, Calendar.getInstance().getTime()));
-        lista.add(new AlunoED(5, "João da Silva", 490.12, Calendar.getInstance().getTime()));
+        List<Aluno> lista = new ArrayList<Aluno>();
+        lista.add(new Aluno(1, "Rafael", 5000.00, Calendar.getInstance().getTime()));
+        lista.add(new Aluno(2, "José", 6000.00, Calendar.getInstance().getTime()));
+        lista.add(new Aluno(3, "Maria", 3000.00, Calendar.getInstance().getTime()));
+        lista.add(new Aluno(4, "Ana Cláudia", 1245.67, Calendar.getInstance().getTime()));
+        lista.add(new Aluno(5, "João da Silva", 490.12, Calendar.getInstance().getTime()));
 
-        th = new JTableHelper<AlunoED>(tabela);
+        th = new JTableHelper<Aluno>(tabela);
         th.setModel(lista);
-//        th.turnHighlightOn();
         
         setLocationRelativeTo(null);
     }

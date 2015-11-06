@@ -1,21 +1,21 @@
-package com.jdf.database.ed;
+package com.jdf.database.bean;
 
 import java.io.Serializable;
 import java.util.Collection;
 
-public class TurmaED implements Serializable {
+public class Turma implements Serializable {
 
 	private Integer id;
 	
 	private String nome;
 
-	private Collection<AlunoED> listaAlunos;
+	private Collection<Aluno> listaAlunos;
 	
-	public TurmaED() {
+	public Turma() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public TurmaED(Integer id, String nome) {
+	public Turma(Integer id, String nome) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -53,7 +53,7 @@ public class TurmaED implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		TurmaED other = (TurmaED) obj;
+		Turma other = (Turma) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -62,11 +62,11 @@ public class TurmaED implements Serializable {
 		return true;
 	}
 
-	public void setListaAlunos(Collection<AlunoED> listaAlunos) {
+	public void setListaAlunos(Collection<Aluno> listaAlunos) {
 		this.listaAlunos = listaAlunos;
 	}
 
-	public Collection<AlunoED> getListaAlunos() {
+	public Collection<Aluno> getListaAlunos() {
 		return listaAlunos;
 	}
 

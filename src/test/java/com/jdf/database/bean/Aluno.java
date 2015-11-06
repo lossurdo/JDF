@@ -1,4 +1,4 @@
-package com.jdf.database.ed;
+package com.jdf.database.bean;
 
 import com.jdf.swing.helper.jtable.ColumnMetadataAlign;
 import com.jdf.swing.helper.jtable.ColumnMetadataFormat;
@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
-public class AlunoED implements Serializable {
+public class Aluno implements Serializable {
 
 	@JTableColumnMetadata(name="ID", size=35, align=ColumnMetadataAlign.CENTER)
 	private Integer id;
@@ -15,7 +15,7 @@ public class AlunoED implements Serializable {
 	@JTableColumnMetadata(name="Nome do Aluno")
 	private String nome;
 	
-	private Collection<TurmaED> listaTurmas;
+	private Collection<Turma> listaTurmas;
 	
 	@JTableColumnMetadata(name = "Salário", size = 80, format = ColumnMetadataFormat.CURRENCY, align=ColumnMetadataAlign.RIGHT)
 	private Double salario;
@@ -23,29 +23,29 @@ public class AlunoED implements Serializable {
 	@JTableColumnMetadata(name = "Dt.Nasc.", size = 120, format = ColumnMetadataFormat.DATE_MM_YYYY, align=ColumnMetadataAlign.CENTER)
 	private Date dtNascimento;
 
-	public AlunoED() {
+	public Aluno() {
 		
 	}
 
-	public AlunoED(Integer id) {
+	public Aluno(Integer id) {
 		super();
 		this.id = id;
 	}
 
-	public AlunoED(Integer id, String nome) {
+	public Aluno(Integer id, String nome) {
 		super();
 		this.id = id;
 		this.nome = nome;
 	}
 
-	public AlunoED(Integer id, String nome, Double salario) {
+	public Aluno(Integer id, String nome, Double salario) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.salario = salario;
 	}
 
-	public AlunoED(Integer id, String nome, Double salario, Date dtNascimento) {
+	public Aluno(Integer id, String nome, Double salario, Date dtNascimento) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -85,7 +85,7 @@ public class AlunoED implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		AlunoED other = (AlunoED) obj;
+		Aluno other = (Aluno) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -94,11 +94,11 @@ public class AlunoED implements Serializable {
 		return true;
 	}
 
-	public void setListaTurmas(Collection<TurmaED> listaTurmas) {
+	public void setListaTurmas(Collection<Turma> listaTurmas) {
 		this.listaTurmas = listaTurmas;
 	}
 
-	public Collection<TurmaED> getListaTurmas() {
+	public Collection<Turma> getListaTurmas() {
 		return listaTurmas;
 	}
 

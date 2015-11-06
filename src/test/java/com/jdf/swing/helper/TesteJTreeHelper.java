@@ -1,6 +1,6 @@
 package com.jdf.swing.helper;
 
-import com.jdf.database.ed.AlunoED;
+import com.jdf.database.bean.Aluno;
 import com.jdf.swing.iface.IconPackBase64;
 
 
@@ -19,10 +19,10 @@ public class TesteJTreeHelper extends javax.swing.JFrame {
 		jfh.setTitle("JDF - Java Desktop Framework");
 		jfh.centerFrame();
         
-        tree = new JTreeHelper<AlunoED>(arvore, "Cliente");
-        tree.addNode(new AlunoED(1,"Classe A")).addSubnode(new AlunoED(2,"Rafael")).addSubnode(new AlunoED(1,"Queisi"));
-        tree.addNode(new AlunoED(1,"Classe B")).addSubnode(new AlunoED(2,"Ana")).addSubnode(new AlunoED(1,"Maria"));
-        tree.addNode(new AlunoED(1,"Classe C")).addSubnode(new AlunoED(2,"Gabriela")).addNode(new AlunoED(1,"João"), true).addSubnode(new AlunoED(1,"José"));
+        tree = new JTreeHelper<Aluno>(arvore, "Cliente");
+        tree.addNode(new Aluno(1,"Classe A")).addSubnode(new Aluno(2,"Rafael")).addSubnode(new Aluno(1,"Pedro"));
+        tree.addNode(new Aluno(1,"Classe B")).addSubnode(new Aluno(2,"Ana")).addSubnode(new Aluno(1,"Maria"));
+        tree.addNode(new Aluno(1,"Classe C")).addSubnode(new Aluno(2,"Gabriela")).addNode(new Aluno(1,"João"), true).addSubnode(new Aluno(1,"José"));
         tree.setAllOpened();
         tree.setDoubleClickAction(this, "imprimeClicado");
     }
@@ -78,6 +78,6 @@ public class TesteJTreeHelper extends javax.swing.JFrame {
     private javax.swing.JTree arvore;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
-	private JTreeHelper<AlunoED> tree;
+	private JTreeHelper<Aluno> tree;
 
 }

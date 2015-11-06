@@ -11,7 +11,7 @@
 
 package com.jdf.swing.helper;
 
-import com.jdf.database.ed.AlunoED;
+import com.jdf.database.bean.Aluno;
 import com.jdf.swing.iface.IconPackBase64;
 import com.jdf.util.Propriedades;
 import java.net.URI;
@@ -44,14 +44,14 @@ public class ComponentesTela extends javax.swing.JFrame {
         jbh2.setIcon(IconPackBase64.CART);
         
         // lista usada para listagens
-        List<AlunoED> alunos = new ArrayList<AlunoED>();
-        alunos.add(new AlunoED(1,"Rafael Lossurdo"));
-        alunos.add(new AlunoED(2,"Queisi Oliveira"));
-        alunos.add(new AlunoED(3,"João da Silva"));
-        List<AlunoED> alunos2 = new ArrayList<AlunoED>();
-        alunos2.add(new AlunoED(4,"Ana Maria"));
-        alunos2.add(new AlunoED(2,"Carlos Eduardo"));
-        alunos2.add(new AlunoED(5,"Giovanna da Silva"));
+        List<Aluno> alunos = new ArrayList<Aluno>();
+        alunos.add(new Aluno(1,"Rafael Lossurdo"));
+        alunos.add(new Aluno(2,"Queisi Oliveira"));
+        alunos.add(new Aluno(3,"João da Silva"));
+        List<Aluno> alunos2 = new ArrayList<Aluno>();
+        alunos2.add(new Aluno(4,"Ana Maria"));
+        alunos2.add(new Aluno(2,"Carlos Eduardo"));
+        alunos2.add(new Aluno(5,"Giovanna da Silva"));
         
         // seta combo box
         jc = new JComboBoxHelper(comboBox);
