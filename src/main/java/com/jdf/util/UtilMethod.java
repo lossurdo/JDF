@@ -21,10 +21,10 @@ public final class UtilMethod {
     public static synchronized Object executeMethod(Object object, String method) {
         try {
             Class<?> clazz = object.getClass();
-            Method m = clazz.getDeclaredMethod(method, (Class<?>) null);
+            Method m = clazz.getDeclaredMethod(method, null);
             m.setAccessible(true);
-            return m.invoke(object, (Object) null);
-        } catch (IllegalAccessException | IllegalArgumentException | NoSuchMethodException | SecurityException | InvocationTargetException e) {
+            return m.invoke(object, null);
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
