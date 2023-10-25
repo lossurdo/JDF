@@ -5,8 +5,8 @@ import java.util.Collection;
 import javax.swing.DefaultListSelectionModel;
 
 /**
- * Classe utilizada para configurar características
- * de seleção para o componente JTable 
+ * Classe utilizada para configurar caracterÃ­sticas
+ * de seleÃ§Ã£o para o componente JTable 
  * @author lossurdo
  * @since 22/03/2009
  */

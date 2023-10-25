@@ -24,26 +24,26 @@ abstract class MenuAbstract {
 	}
 
 	/**
-	 * Adiciona um separador ‡ barra de menus
+	 * Adiciona um separador √† barra de menus
 	 */
 	public void addSeparator() {
 		component.add(new JSeparator());		
 	}
 	
 	/**
-	 * Adiciona um menu ‡ barra de menus
+	 * Adiciona um menu √† barra de menus
 	 * @param text Texto a ser mostrado no menu
-	 * @return Objeto que permitir· adicionar itens a este menu
+	 * @return Objeto que permitir√° adicionar itens a este menu
 	 */
 	public JMenuHelper addMenu(String text) {
 		return addMenu(text, ' ');
 	}
 	
 	/**
-	 * Adiciona um menu ‡ barra de menus
+	 * Adiciona um menu √† barra de menus
 	 * @param text Texto a ser mostrado no menu
 	 * @param mneumonic Tecla de atalho para acesso ao menu
-	 * @return Objeto que permitir· adicionar itens a este menu
+	 * @return Objeto que permitir√° adicionar itens a este menu
 	 */
 	public JMenuHelper addMenu(String text, Character mneumonic) {
 		JMenu m = new JMenu(text);

@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 /**
- * Classe utilit·ria para apresentaÁ„o de mensagens na tela (SWING)
+ * Classe utilit√°ria para apresenta√ß√£o de mensagens na tela (SWING)
  * @author lossurdo
  * @since 17/08/2008
  */
@@ -16,20 +16,20 @@ public class JOptionPaneHelper {
 	}
 	
 	public static String entryData(String msg) {
-		return JOptionPane.showInputDialog(null, msg, "AtenÁ„o", JOptionPane.QUESTION_MESSAGE);
+		return JOptionPane.showInputDialog(null, msg, "Aten√ß√£o", JOptionPane.QUESTION_MESSAGE);
 	}
 	
 	/**
-	 * Troca para portuguÍs as mensagens do JOptionPane
+	 * Troca para portugu√™s as mensagens do JOptionPane
 	 */
 	public static void changeDefaultMessage() {
 		UIManager.put("OptionPane.yesButtonText", "Sim");
-		UIManager.put("OptionPane.noButtonText", "N„o");
+		UIManager.put("OptionPane.noButtonText", "N√£o");
 		UIManager.put("OptionPane.cancelButtonText", "Cancelar");
 	}
 	
 	public static void success() {
-		JOptionPane.showMessageDialog(null, "OperaÁ„o realizada com sucesso",
+		JOptionPane.showMessageDialog(null, "Opera√ß√£o realizada com sucesso",
 				"Mensagem", JOptionPane.INFORMATION_MESSAGE);
 	}
 
@@ -58,14 +58,14 @@ public class JOptionPaneHelper {
 	}
 	
 	/**
-	 * Pedido de confirmaÁ„o
+	 * Pedido de confirma√ß√£o
 	 * @param msg Mensagem a ser mostrada na tela
-	 * @param control Objeto que ser· testado, verificando se È ou n„o nulo
-	 * @return Verdadeiro caso tenha se pressionado OK e o objeto n„o seja nulo
+	 * @param control Objeto que ser√° testado, verificando se √© ou n√£o nulo
+	 * @return Verdadeiro caso tenha se pressionado OK e o objeto n√£o seja nulo
 	 */
 	public static Boolean confirmation(String msg, Object control) {
 		int opt = JOptionPane.showConfirmDialog(null,
-				msg, "ConfirmaÁ„o",
+				msg, "Confirma√ß√£o",
 				JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
 		if (opt == JOptionPane.OK_OPTION && control!=null) {
 			return true;
@@ -75,7 +75,7 @@ public class JOptionPaneHelper {
 	}
 	
 	/**
-	 * Pedido de confirmaÁ„o
+	 * Pedido de confirma√ß√£o
 	 * @return Verdadeiro caso tenhas se pressionado OK
 	 */
 	public static Boolean confirmation(String msg) {

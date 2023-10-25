@@ -1,7 +1,7 @@
 package com.jdf.swing.helper.jtable;
 
 /**
- * Disposição dos dados na tela para o componente JTable
+ * DisposiÃ§Ã£o dos dados na tela para o componente JTable
  * @author lossurdo
  * @since 22/03/2009
  */

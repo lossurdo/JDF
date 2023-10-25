@@ -72,7 +72,7 @@ final class Base64StringGen extends javax.swing.JFrame implements ClipboardOwner
 				}		
 				
 				setClipboardContents(txtCode.getText());
-				JOptionPaneHelper.simpleMessage("Texto colocado na área de transferência");
+				JOptionPaneHelper.simpleMessage("Texto colocado na Ã¡rea de transferÃªncia");
 			}
 		}.start();
 	}

@@ -3,14 +3,14 @@ package com.jdf.swing.iface;
 import javax.swing.UIManager;
 
 /**
- * Classe respons·vel pelo look and feel
+ * Classe respons√°vel pelo look and feel
  * @author lossurdo
  * @since 01/03/2009
  */
 public class LookAndFeel {
 	
 	/**
-	 * Seta LAF nativo do sistema operacional em quest„o
+	 * Seta LAF nativo do sistema operacional em quest√£o
 	 */
 	public static void setNativeLookAndFeel() {
 		try {

@@ -26,7 +26,7 @@ public class JTableHelper<T> {
     }
 
     /**
-     * Seta a lista padrão
+     * Seta a lista padrÃ£o
      * @param list
      */
     public void setModel(List<T> list) {

@@ -1,15 +1,15 @@
 package com.jdf.security;
 
 /**
- * Interface implementada pelos objetos de tela para controle de seguranÁa
+ * Interface implementada pelos objetos de tela para controle de seguran√ßa
  * @author rafael-lossurdo
  * @since 22/04/2009
  */
 public interface JDFSecurity {
 	/**
-	 * Verifica permiss„o do usu·rio logado
+	 * Verifica permiss√£o do usu√°rio logado
 	 * @param object Objeto a ser verificado
-	 * @param action AÁ„o a ser verificada
+	 * @param action A√ß√£o a ser verificada
 	 */
 	public void verifyPermission(String object, String action);
 }

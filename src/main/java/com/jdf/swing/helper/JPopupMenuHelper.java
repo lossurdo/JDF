@@ -7,7 +7,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JPopupMenu;
 
 /**
- * Classe auxiliar para criação do objeto JPopupMenu
+ * Classe auxiliar para criaÃ§Ã£o do objeto JPopupMenu
  * @author lossurdo
  * @since 20/04/2009
  */

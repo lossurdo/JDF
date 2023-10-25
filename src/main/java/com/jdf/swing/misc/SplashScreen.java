@@ -12,7 +12,7 @@ import javax.swing.JProgressBar;
 import com.jdf.swing.iface.JDFDefaultImages;
 
 /**
- * Classe utilit·ria para criaÁ„o de splash screen
+ * Classe utilit√°ria para cria√ß√£o de splash screen
  * @author lossurdo
  * @since 15/03/2009
  */
@@ -73,7 +73,7 @@ public final class SplashScreen {
 	}
 
 	/**
-	 * Cancela exibiÁ„o do splashscreen
+	 * Cancela exibi√ß√£o do splashscreen
 	 */
 	public void cancelExibition() {
 		new Thread() {

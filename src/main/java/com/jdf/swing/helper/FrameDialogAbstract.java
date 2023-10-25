@@ -19,8 +19,8 @@ abstract class FrameDialogAbstract extends IconSetsImpl {
 	}
 
 	/**
-	 * Seta o título da janela
-	 * @param title Título
+	 * Seta o tÃ­tulo da janela
+	 * @param title TÃ­tulo
 	 */
 	public abstract void setTitle(String title);
 	

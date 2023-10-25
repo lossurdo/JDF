@@ -50,14 +50,14 @@ public class JButtonHelper implements IconSets, JDFSecurity {
     }
 
     /**
-     * Transforma um botão em campo hora utilizando a data atual
+     * Transforma um botÃ£o em campo hora utilizando a data atual
      */
     public void transformToTimeButton() {
         transformToTimeButton(Calendar.getInstance().getTime());
     }
 
     /**
-     * Transforma um botão em campo hora
+     * Transforma um botÃ£o em campo hora
      *
      * @param time Hora
      */
@@ -90,14 +90,14 @@ public class JButtonHelper implements IconSets, JDFSecurity {
     }
 
     /**
-     * Transforma um botão em campo data (calendário) utilizando a data atual
+     * Transforma um botÃ£o em campo data (calendÃ¡rio) utilizando a data atual
      */
     public void transformToDateButton() {
         transformToDateButton(Calendar.getInstance().getTime());
     }
 
     /**
-     * Transforma um botão em campo data (calendário)
+     * Transforma um botÃ£o em campo data (calendÃ¡rio)
      *
      * @param date Data inicial do campo
      */
@@ -156,10 +156,10 @@ public class JButtonHelper implements IconSets, JDFSecurity {
     }
 
     /**
-     * Transforma botão em um "chamador" de LOV
+     * Transforma botÃ£o em um "chamador" de LOV
      *
-     * @param object Objeto que contém a ação/método a ser executado
-     * @param action Ação a ser executada
+     * @param object Objeto que contÃ©m a aÃ§Ã£o/mÃ©todo a ser executado
+     * @param action AÃ§Ã£o a ser executada
      */
     public void transformToLOV(final Object object, final String action) {
         button.setText("");
@@ -175,28 +175,28 @@ public class JButtonHelper implements IconSets, JDFSecurity {
     }
 
     /**
-     * Insere um ícone em um botão
+     * Insere um Ã­cone em um botÃ£o
      *
-     * @param icon Enum com referência ao ícone
+     * @param icon Enum com referÃªncia ao Ã­cone
      */
     public void setIcon(IconPackBase64 icon) {
         button.setIcon(new ImageReaderBase64(icon).toImage());
     }
 
     /**
-     * Insere um ícone em um botão
+     * Insere um Ã­cone em um botÃ£o
      *
-     * @param icon Referência ao arquivo
+     * @param icon ReferÃªncia ao arquivo
      */
     public void setIcon(String icon) {
         button.setIcon(new ImageReaderBase64(icon).toImage());
     }
 
     /**
-     * Adiciona uma ação ao evento de clique no botão
+     * Adiciona uma aÃ§Ã£o ao evento de clique no botÃ£o
      *
-     * @param object Objeto que contém a ação a ser executada
-     * @param method Método a ser executado
+     * @param object Objeto que contÃ©m a aÃ§Ã£o a ser executada
+     * @param method MÃ©todo a ser executado
      */
     public void addAction(final Object object, final String method) {
         button.addActionListener(new ActionListener() {

@@ -19,11 +19,11 @@ public class TesteTrayBar {
 	}
 
 	public void acaoA() {
-		JOptionPaneHelper.warning("Ação A");
+		JOptionPaneHelper.warning("AÃ§Ã£o A");
 	}
 	
 	public void acaoB() {
-		JOptionPaneHelper.warning("Ação B");		
+		JOptionPaneHelper.warning("AÃ§Ã£o B");		
 	}
 	
 	public void exit() {

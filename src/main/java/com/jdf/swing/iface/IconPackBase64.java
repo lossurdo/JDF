@@ -1,7 +1,7 @@
 package com.jdf.swing.iface;
 
 /**
- * 1000 ícones para serem usados pelas aplicações
+ * 1000 Ã­cones para serem usados pelas aplicaÃ§Ãµes
  * em formato Base64
  * @author Rafael Lossurdo
  * @since 16/04/2009

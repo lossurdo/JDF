@@ -37,7 +37,7 @@ public final class JLabelHelper {
 
 	/**
 	 * Transforma objeto JLabel em um link para o browser/navegador 
-	 * @param uri Endereço para acesso no momento do clique (ex. http://lossurdojava.blogspot.com)
+	 * @param uri EndereÃ§o para acesso no momento do clique (ex. http://lossurdojava.blogspot.com)
 	 * @param tooltip Texto mostrado quando o mouse estiver em cima do link
 	 */
 	public void transformToURLLink(URI uri, String tooltip) {
@@ -50,7 +50,7 @@ public final class JLabelHelper {
 	
 	/**
 	 * Transforma objeto JLabel em um link para o browser/navegador 
-	 * @param uri Endereço para acesso no momento do clique (ex. http://lossurdojava.blogspot.com)
+	 * @param uri EndereÃ§o para acesso no momento do clique (ex. http://lossurdojava.blogspot.com)
 	 */
 	public void transformToURLLink(URI uri) {
 		transformToURLLink(uri, null);

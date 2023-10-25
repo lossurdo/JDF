@@ -17,7 +17,7 @@ public class Aluno implements Serializable {
 	
 	private Collection<Turma> listaTurmas;
 	
-	@JTableColumnMetadata(name = "Sal·rio", size = 80, format = ColumnMetadataFormat.CURRENCY, align=ColumnMetadataAlign.RIGHT)
+	@JTableColumnMetadata(name = "Sal√°rio", size = 80, format = ColumnMetadataFormat.CURRENCY, align=ColumnMetadataAlign.RIGHT)
 	private Double salario;
 
 	@JTableColumnMetadata(name = "Dt.Nasc.", size = 120, format = ColumnMetadataFormat.DATE_MM_YYYY, align=ColumnMetadataAlign.CENTER)

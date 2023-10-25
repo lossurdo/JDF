@@ -6,7 +6,7 @@ import javax.swing.JFormattedTextField;
 import javax.swing.text.MaskFormatter;
 
 /**
- * Classe utilitária para formatação do componente JFormattedTextField
+ * Classe utilitÃ¡ria para formataÃ§Ã£o do componente JFormattedTextField
  * @author rafael-lossurdo
  * @since 03/03/2009
  */
@@ -23,42 +23,42 @@ public class JFormattedTextFieldHelper {
 	}
 
 	/**
-	 * Aplica formatação de data
+	 * Aplica formataÃ§Ã£o de data
 	 */
 	public void applyDateFormat() {
 		formatted.setFormatterFactory(new JFormattedTextField(getMask("##/##/####")).getFormatterFactory());
 	}
 
 	/**
-	 * Aplica formatação de telefone
+	 * Aplica formataÃ§Ã£o de telefone
 	 */
 	public void applyPhoneFormat() {
 		formatted.setFormatterFactory(new JFormattedTextField(getMask("####.####")).getFormatterFactory());
 	}
 
 	/**
-	 * Aplica formatação de telefone - 10 posições
+	 * Aplica formataÃ§Ã£o de telefone - 10 posiÃ§Ãµes
 	 */
 	public void applyPhoneFormat10() {
 		formatted.setFormatterFactory(new JFormattedTextField(getMask("#####.#####")).getFormatterFactory());
 	}
 
 	/**
-	 * Aplica formatação de DDD
+	 * Aplica formataÃ§Ã£o de DDD
 	 */
 	public void applyDDDFormat() {
 		formatted.setFormatterFactory(new JFormattedTextField(getMask("(##)")).getFormatterFactory());
 	}
 
 	/**
-	 * Aplica formatação de hora
+	 * Aplica formataÃ§Ã£o de hora
 	 */
 	public void applyHourFormat() {
 		formatted.setFormatterFactory(new JFormattedTextField(getMask("##:##")).getFormatterFactory());
 	}
 
 	/**
-	 * Aplica formatação de hora/segundo
+	 * Aplica formataÃ§Ã£o de hora/segundo
 	 */
 	public void applyHourSecondFormat() {
 		formatted.setFormatterFactory(new JFormattedTextField(getMask("##:##:##")).getFormatterFactory());

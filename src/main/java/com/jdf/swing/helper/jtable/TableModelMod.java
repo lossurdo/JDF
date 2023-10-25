@@ -75,7 +75,7 @@ class TableModelMod implements TableModel {
     }
 
     /**
-     * NENHUMA C…LULA EDIT¡VEL
+     * NENHUMA C√âLULA EDIT√ÅVEL
      */
     public boolean isCellEditable(int rowIndex, int columnIndex) {
         return false;
@@ -116,7 +116,7 @@ class TableModelMod implements TableModel {
     }
 
     /**
-     * Formata n˙mero, adicionando zero (ex. 9 para 09)
+     * Formata n√∫mero, adicionando zero (ex. 9 para 09)
      * @param number
      * @return
      */
@@ -143,7 +143,7 @@ class TableModelMod implements TableModel {
 	}
 
 	/**
-	 * Valida se objeto passÌvel de retorno È do tipo Date ou Calendar
+	 * Valida se objeto pass√≠vel de retorno √© do tipo Date ou Calendar
 	 * @param ret
 	 */
 	private void validateDateField(Object ret) {
@@ -153,21 +153,21 @@ class TableModelMod implements TableModel {
 	}
 
     /**
-     * N√O IMPLEMENTADO
+     * N√ÉO IMPLEMENTADO
      */
     public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
         // nada
     }
 
     /**
-     * N√O IMPLEMENTADO
+     * N√ÉO IMPLEMENTADO
      */
     public void addTableModelListener(TableModelListener l) {
         // nada
     }
 
     /**
-     * N√O IMPLEMENTADO
+     * N√ÉO IMPLEMENTADO
      */
     public void removeTableModelListener(TableModelListener l) {
         // nada

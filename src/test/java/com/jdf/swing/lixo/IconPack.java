@@ -1,7 +1,7 @@
 package com.jdf.swing.lixo;
 
 /**
- * Nomenclatura dos Ìcones padrıes a serem utilizados pelo framework
+ * Nomenclatura dos √≠cones padr√µes a serem utilizados pelo framework
  * 
  * @author lossurdo
  * @since 02/03/2009

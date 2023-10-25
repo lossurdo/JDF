@@ -7,7 +7,7 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.TableColumn;
 
 /**
- * Classe utilizada para configurar as características das colunas
+ * Classe utilizada para configurar as caracterÃ­sticas das colunas
  * adicionadas em um componente JTable
  * @author lossurdo
  * @since 22/03/2009
@@ -27,7 +27,7 @@ class TableColumnModelMod extends DefaultTableColumnModel {
     }
 
     /**
-     * Método utilizado para controlar a largura
+     * MÃ©todo utilizado para controlar a largura
      * das colunas adicionadas no componente JTable
      * @param tc
      */
@@ -49,7 +49,7 @@ class TableColumnModelMod extends DefaultTableColumnModel {
                     }
                 }
             }
-            break; // só precisa do primeiro registro para determinar as colunas
+            break; // sÃ³ precisa do primeiro registro para determinar as colunas
         }
         super.addColumn(tc);
     }

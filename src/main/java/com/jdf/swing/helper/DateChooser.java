@@ -42,12 +42,12 @@ class DateChooser extends JDialog implements ItemListener, MouseListener,
 
 	/** Names of the months. */
 	private static final String[] MONTHS = new String[] { "Janeiro",
-			"Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto",
+			"Fevereiro", "MarÃ§o", "Abril", "Maio", "Junho", "Julho", "Agosto",
 			"Setembro", "Outubro", "Novembro", "Dezembro" };
 
 	/** Names of the days of the week. */
 	private static final String[] DAYS = new String[] { "Dom", "Seg", "Ter",
-			"Qua", "Qui", "Sex", "Sáb" };
+			"Qua", "Qui", "Sex", "SÃ¡b" };
 	/**
 	 * Text color of the days of the weeks, used as column headers in the
 	 * calendar.
@@ -205,7 +205,7 @@ class DateChooser extends JDialog implements ItemListener, MouseListener,
 		pack();
 		setResizable(false);
 
-		// modificações
+		// modificaÃ§Ãµes
 		setLocationRelativeTo(null);
 		IconSets b1 = new JButtonHelper(ok);	
 		b1.setIcon(IconPackBase64.ACCEPT);

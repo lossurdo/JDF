@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 import com.jdf.swing.iface.IconPackBase64;
 
 /**
- * Interface padrão para componentes que contenham ícones
+ * Interface padrÃ£o para componentes que contenham Ã­cones
  * @author lossurdo
  * @since 16/04/2009
  */
@@ -13,7 +13,7 @@ interface IconSets {
 
 	/**
 	 * Atribui icone ao objeto 
-	 * @param icon Enum contendo a referência Base64 do icone
+	 * @param icon Enum contendo a referÃªncia Base64 do icone
 	 */
 	public abstract void setIcon(IconPackBase64 icon);
 

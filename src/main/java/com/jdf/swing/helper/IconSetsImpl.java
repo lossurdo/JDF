@@ -12,13 +12,13 @@ import com.jdf.swing.iface.IconPackBase64;
 import com.jdf.swing.iface.ImageReaderBase64;
 
 /**
- * Classe abstrata que implementa a formatação de ícones
+ * Classe abstrata que implementa a formataÃ§Ã£o de Ã­cones
  * @author lossurdo
  * @since 16/04/2009
  */
 abstract class IconSetsImpl implements IconSets {
 
-	private static final String MSG_EXCEPTION = "Este componente não foi mapeado no framework, deve-se implementar: ";
+	private static final String MSG_EXCEPTION = "Este componente nÃ£o foi mapeado no framework, deve-se implementar: ";
 	protected Component window;
 
 	/**
@@ -78,7 +78,7 @@ abstract class IconSetsImpl implements IconSets {
 	}
 
 	/**
-	 * Devolve uma referência ao objeto da janela
+	 * Devolve uma referÃªncia ao objeto da janela
 	 * @return
 	 */
 	protected Component getWindow() {

@@ -31,10 +31,10 @@ public class TesteJTable extends javax.swing.JFrame {
 
         List<Aluno> lista = new ArrayList<Aluno>();
         lista.add(new Aluno(1, "Rafael", 5000.00, Calendar.getInstance().getTime()));
-        lista.add(new Aluno(2, "JosÈ", 6000.00, Calendar.getInstance().getTime()));
+        lista.add(new Aluno(2, "Jos√©", 6000.00, Calendar.getInstance().getTime()));
         lista.add(new Aluno(3, "Maria", 3000.00, Calendar.getInstance().getTime()));
-        lista.add(new Aluno(4, "Ana Cl·udia", 1245.67, Calendar.getInstance().getTime()));
-        lista.add(new Aluno(5, "Jo„o da Silva", 490.12, Calendar.getInstance().getTime()));
+        lista.add(new Aluno(4, "Ana Cl√°udia", 1245.67, Calendar.getInstance().getTime()));
+        lista.add(new Aluno(5, "Jo√£o da Silva", 490.12, Calendar.getInstance().getTime()));
 
         th = new JTableHelper<Aluno>(tabela);
         th.setModel(lista);

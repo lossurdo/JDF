@@ -14,7 +14,7 @@ import com.jdf.swing.iface.Shortcut;
 import com.jdf.util.UtilMethod;
 
 /**
- * Classe auxiliar para criaÁ„o do objeto JMenu
+ * Classe auxiliar para cria√ß√£o do objeto JMenu
  * @author lossurdo
  * @since 24/03/2009
  */
@@ -70,12 +70,12 @@ public class JMenuHelper {
 	
 	/**
 	 * Adiciona um item ao menu
-	 * @param actionObject Objeto que contÈm a aÁ„o a ser executada no momento do clique
-	 * @param action AÁ„o a ser executada no momento do clique
+	 * @param actionObject Objeto que cont√©m a a√ß√£o a ser executada no momento do clique
+	 * @param action A√ß√£o a ser executada no momento do clique
 	 * @param item Texto a ser apresentado na tela
-	 * @param icon Õcone
+	 * @param icon √çcone
 	 * @param shortcut Atalho ao item
-	 * @return Este objeto que permitir· adicionar mais itens
+	 * @return Este objeto que permitir√° adicionar mais itens
 	 */
 	public JMenuHelper addItem(Object actionObject, String action, String item,
 			IconPackBase64 icon, Shortcut shortcut) {
@@ -84,11 +84,11 @@ public class JMenuHelper {
 
 	/**
 	 * Adiciona um item ao menu
-	 * @param actionObject Objeto que contÈm a aÁ„o a ser executada no momento do clique
-	 * @param action AÁ„o a ser executada no momento do clique
+	 * @param actionObject Objeto que cont√©m a a√ß√£o a ser executada no momento do clique
+	 * @param action A√ß√£o a ser executada no momento do clique
 	 * @param item Texto a ser apresentado na tela
-	 * @param icon Õcone
-	 * @return Este objeto que permitir· adicionar mais itens
+	 * @param icon √çcone
+	 * @return Este objeto que permitir√° adicionar mais itens
 	 */
 	public JMenuHelper addItem(Object actionObject, String action, String item,
 			IconPackBase64 icon) {
@@ -98,10 +98,10 @@ public class JMenuHelper {
 
 	/**
 	 * Adiciona um item ao menu
-	 * @param actionObject Objeto que contÈm a aÁ„o a ser executada no momento do clique
-	 * @param action AÁ„o a ser executada no momento do clique
+	 * @param actionObject Objeto que cont√©m a a√ß√£o a ser executada no momento do clique
+	 * @param action A√ß√£o a ser executada no momento do clique
 	 * @param item Texto a ser apresentado na tela
-	 * @return Este objeto que permitir· adicionar mais itens
+	 * @return Este objeto que permitir√° adicionar mais itens
 	 */
 	public JMenuHelper addItem(Object actionObject, String action, String item) {
 		return addItem(actionObject, action, item, null, Shortcut.DEFAULT,
@@ -110,13 +110,13 @@ public class JMenuHelper {
 
 	/**
 	 * Adiciona um item ao menu
-	 * @param actionObject Objeto que contÈm a aÁ„o a ser executada no momento do clique
-	 * @param action AÁ„o a ser executada no momento do clique
+	 * @param actionObject Objeto que cont√©m a a√ß√£o a ser executada no momento do clique
+	 * @param action A√ß√£o a ser executada no momento do clique
 	 * @param item Texto a ser apresentado na tela
-	 * @param icon Õcone
+	 * @param icon √çcone
 	 * @param shortcut Atalho ao item
 	 * @param mneumonic Tecla de atalho ao item
-	 * @return Este objeto que permitir· adicionar mais itens
+	 * @return Este objeto que permitir√° adicionar mais itens
 	 */
 	public JMenuHelper addItem(final Object actionObject, final String action,
 			String item, IconPackBase64 icon, Shortcut shortcut,
@@ -147,7 +147,7 @@ public class JMenuHelper {
 
 	/**
 	 * Adiciona um separador entre os itens do menu
-	 * @return Este objeto que permitir· adicionar mais itens
+	 * @return Este objeto que permitir√° adicionar mais itens
 	 */
 	public JMenuHelper addSeparator() {
 		menu.addSeparator();

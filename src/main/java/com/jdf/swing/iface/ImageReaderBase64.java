@@ -5,8 +5,8 @@ import javax.swing.ImageIcon;
 import com.jdf.util.Image2Base64;
 
 /**
- * Classe responsável pela leitura de imagens em Base64 e
- * arquivos ZIP no classpath da aplicação
+ * Classe responsÃ¡vel pela leitura de imagens em Base64 e
+ * arquivos ZIP no classpath da aplicaÃ§Ã£o
  * @author lossurdo
  * @since 16/04/2009
  */
@@ -17,8 +17,8 @@ public final class ImageReaderBase64 {
 
 	/**
 	 * Construtor
-	 * @param image Referência ao arquivo de imagem (ex. /icons/print.gif). Estes
-	 * arquivos devem estar zipados e associados ao classpath da aplicação.
+	 * @param image ReferÃªncia ao arquivo de imagem (ex. /icons/print.gif). Estes
+	 * arquivos devem estar zipados e associados ao classpath da aplicaÃ§Ã£o.
 	 */
 	public ImageReaderBase64(String image) {
 		this.image = image;
@@ -26,7 +26,7 @@ public final class ImageReaderBase64 {
 
 	/**
 	 * Construtor
-	 * @param image Referência a imagem
+	 * @param image ReferÃªncia a imagem
 	 */
 	public ImageReaderBase64(IconPackBase64 image) {
 		this.imageBase64 = image;

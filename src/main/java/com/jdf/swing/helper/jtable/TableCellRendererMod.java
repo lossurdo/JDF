@@ -10,7 +10,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
 /**
- * Classe utilizada para formatar a exibição de dados em uma listagem para o
+ * Classe utilizada para formatar a exibiÃ§Ã£o de dados em uma listagem para o
  * componente JTable
  * 
  * @author lossurdo
@@ -27,7 +27,7 @@ class TableCellRendererMod extends DefaultTableCellRenderer {
 	/**
 	 * Construtor
 	 * @param list
-	 * @param highlight Diferenciação entre as linhas exibidas
+	 * @param highlight DiferenciaÃ§Ã£o entre as linhas exibidas
 	 */
 	public TableCellRendererMod(Collection list, Boolean highlight) {
 		super();

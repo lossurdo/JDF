@@ -40,7 +40,7 @@ public class TesteJButtonHelper extends JFrame {
 	}
 
 	public void chamaLov() {
-		JOptionPaneHelper.warning("Este método chamaria uma janela de LOV (JDialog)");
+		JOptionPaneHelper.warning("Este mÃ©todo chamaria uma janela de LOV (JDialog)");
 	}
 	
 	/**

@@ -62,8 +62,8 @@ public class TrayBar {
 
 	/**
 	 * Adiciona um item ao menu
-	 * @param object Objeto que contÈm o mÈtodo a ser executado no momento do clique
-	 * @param action Nome do mÈtodo a ser executado
+	 * @param object Objeto que cont√©m o m√©todo a ser executado no momento do clique
+	 * @param action Nome do m√©todo a ser executado
 	 * @param txt Texto do menu
 	 * @return
 	 */
@@ -73,8 +73,8 @@ public class TrayBar {
 
 	/**
 	 * Adiciona um item ao menu
-	 * @param object Objeto que contÈm o mÈtodo a ser executado no momento do clique
-	 * @param action Nome do mÈtodo a ser executado
+	 * @param object Objeto que cont√©m o m√©todo a ser executado no momento do clique
+	 * @param action Nome do m√©todo a ser executado
 	 * @param txt Texto do menu
 	 * @param shortcut Tecla de atalho
 	 * @return
@@ -122,8 +122,8 @@ public class TrayBar {
 	}
 
 	/**
-	 * Mostra mensagem popup de informaÁ„o
-	 * @param caption TÌtulo
+	 * Mostra mensagem popup de informa√ß√£o
+	 * @param caption T√≠tulo
 	 * @param txt Mensagem
 	 */
 	public void popupInfoMessage(String caption, String txt) {
@@ -132,7 +132,7 @@ public class TrayBar {
 	
 	/**
 	 * Mostra mensagem popup de erro
-	 * @param caption TÌtulo
+	 * @param caption T√≠tulo
 	 * @param txt Mensagem
 	 */
 	public void popupErrorMessage(String caption, String txt) {
@@ -141,7 +141,7 @@ public class TrayBar {
 	
 	/**
 	 * Mostra mensagem popup de alerta
-	 * @param caption TÌtulo
+	 * @param caption T√≠tulo
 	 * @param txt Mensagem
 	 */
 	public void popupWarningMessage(String caption, String txt) {
@@ -155,7 +155,7 @@ public class TrayBar {
 	}
 	
 	/**
-	 * Informa se o traybar È compatÌvel com o SO em quest„o
+	 * Informa se o traybar √© compat√≠vel com o SO em quest√£o
 	 * @return
 	 */
 	public static Boolean isSupported() {

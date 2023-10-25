@@ -1,7 +1,7 @@
 package com.jdf.swing.iface;
 
 /**
- * Exceção utilizada para lançar mensagens para interface
+ * ExceÃ§Ã£o utilizada para lanÃ§ar mensagens para interface
  * @author lossurdo
  * @since 22/03/2009
  */

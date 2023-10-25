@@ -3,16 +3,16 @@ package com.jdf.util;
 import java.lang.reflect.Method;
 
 /**
- * Utilit·rio para tratar de reflex„o em classes
+ * Utilit√°rio para tratar de reflex√£o em classes
  * @author lossurdo
  * @since 15/03/2009
  */
 public final class UtilMethod {
 	
 	/**
-	 * Executa a aÁ„o sem passagem de par‚metros
-	 * @param object inst‚ncia do objeto que contÈm o mÈtodo a ser executado
-	 * @param method mÈtodo a ser executado
+	 * Executa a a√ß√£o sem passagem de par√¢metros
+	 * @param object inst√¢ncia do objeto que cont√©m o m√©todo a ser executado
+	 * @param method m√©todo a ser executado
 	 */
 	
 	public static synchronized Object executeMethod(Object object, String method) {

@@ -15,7 +15,7 @@ import java.lang.reflect.Method;
 import javax.swing.JPanel;
 
 /**
- * Tela padr„o para logon no sistema
+ * Tela padr√£o para logon no sistema
  * @author lossurdo
  * @since 20/04/2009
  */
@@ -27,8 +27,8 @@ public class LogonDialog extends javax.swing.JDialog {
 
     /**
      * Construtor
-     * @param object Objeto que contÈm a aÁ„o a ser executada
-     * @param action AÁ„o a ser executada
+     * @param object Objeto que cont√©m a a√ß√£o a ser executada
+     * @param action A√ß√£o a ser executada
      */
     public LogonDialog(Object object, String action) {
         super();
@@ -62,11 +62,11 @@ public class LogonDialog extends javax.swing.JDialog {
     }
     
     /**
-     * Chama mÈtodo que efetua logon 
+     * Chama m√©todo que efetua logon 
      */
     private void doLogon() {
     	if(username.getText().equals("") || new String(password.getPassword()).equals("")) {
-    		JOptionPaneHelper.error("Usu·rio e/ou senha inv·lidos");
+    		JOptionPaneHelper.error("Usu√°rio e/ou senha inv√°lidos");
     		username.requestFocus();
     	} else {
     		try {
@@ -101,7 +101,7 @@ public class LogonDialog extends javax.swing.JDialog {
         painelLogin.setLayout(new java.awt.GridBagLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18));
-        jLabel1.setText("Usu·rio:");
+        jLabel1.setText("Usu√°rio:");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
@@ -193,7 +193,7 @@ public class LogonDialog extends javax.swing.JDialog {
 	}
 
     /**
-     * Exemplo de autenticaÁ„o
+     * Exemplo de autentica√ß√£o
      * @param u
      * @param p
      */
@@ -202,7 +202,7 @@ public class LogonDialog extends javax.swing.JDialog {
     		JOptionPaneHelper.simpleMessage("Senha correta!");
     		System.exit(0);
     	} else {
-    		throw new JDFMessageException("Erro na validaÁ„o do usu·rio e senha");
+    		throw new JDFMessageException("Erro na valida√ß√£o do usu√°rio e senha");
     	}
     }
     

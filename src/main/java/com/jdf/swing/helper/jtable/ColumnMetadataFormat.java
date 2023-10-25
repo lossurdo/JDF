@@ -1,14 +1,14 @@
 package com.jdf.swing.helper.jtable;
 
 /**
- * Enum utilizado para formatar os dados que ser„o apresentados
+ * Enum utilizado para formatar os dados que ser√£o apresentados
  * no componente JTable
  * @author lossurdo
  * @since 22/03/2009
  */
 public enum ColumnMetadataFormat {
 	/**
-	 * Formato Padr„o
+	 * Formato Padr√£o
 	 */
 	DEFAULT(null),
 	/**

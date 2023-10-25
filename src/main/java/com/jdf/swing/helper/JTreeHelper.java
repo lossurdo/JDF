@@ -38,7 +38,7 @@ public final class JTreeHelper<T> {
 	/**
 	 * Construtor
 	 * @param tree
-	 * @param rootName Nome da raÌz
+	 * @param rootName Nome da ra√≠z
 	 */
 	public JTreeHelper(final JTree tree, String rootName) {
 		this.tree = tree;
@@ -53,7 +53,7 @@ public final class JTreeHelper<T> {
 	}
 
 	/**
-	 * Adiciona um nÛ principal a um nÛ j· existente
+	 * Adiciona um n√≥ principal a um n√≥ j√° existente
 	 * @param object
 	 * @param mod
 	 * @return
@@ -72,7 +72,7 @@ public final class JTreeHelper<T> {
 	}
 
 	/**
-	 * Adiciona um nÛ principal
+	 * Adiciona um n√≥ principal
 	 * @param object
 	 * @return
 	 */
@@ -86,7 +86,7 @@ public final class JTreeHelper<T> {
 	}
 
 	/**
-	 * Adiciona um sub-nÛ ao nÛ principal
+	 * Adiciona um sub-n√≥ ao n√≥ principal
 	 * @param object
 	 * @return
 	 */
@@ -128,9 +128,9 @@ public final class JTreeHelper<T> {
 	}
 
 	/**
-	 * Atribui a aÁ„o a ser executada no momento do duplo clique no nÛ
-	 * @param object Objeto que contÈm a aÁ„o a ser executada
-	 * @param action MÈtodo a ser executado
+	 * Atribui a a√ß√£o a ser executada no momento do duplo clique no n√≥
+	 * @param object Objeto que cont√©m a a√ß√£o a ser executada
+	 * @param action M√©todo a ser executado
 	 */
 	public void setDoubleClickAction(Object object, String action) {
 		this.object = object;
@@ -148,7 +148,7 @@ public final class JTreeHelper<T> {
 	}
 
 	/**
-	 * Inicia a ·rvore com todos os nÛs abertos
+	 * Inicia a √°rvore com todos os n√≥s abertos
 	 */
 	public void setAllOpened() {
 		expandAll(tree, true);

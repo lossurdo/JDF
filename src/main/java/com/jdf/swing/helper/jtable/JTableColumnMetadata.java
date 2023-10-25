@@ -6,8 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation respons·vel pela marcaÁ„o de metadados
- * para exibiÁ„o em componentes JTable
+ * Annotation respons√°vel pela marca√ß√£o de metadados
+ * para exibi√ß√£o em componentes JTable
  * @author lossurdo
  * @since 22/03/2009
  */
@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface JTableColumnMetadata {
     /**
-     * Nome do cabeÁalho da coluna
+     * Nome do cabe√ßalho da coluna
      * @return
      */
     public String name();
@@ -26,13 +26,13 @@ public @interface JTableColumnMetadata {
     public int size() default 0;
     
     /**
-     * Formato em que os dados ser„o exibidos
+     * Formato em que os dados ser√£o exibidos
      * @return
      */
 	public ColumnMetadataFormat format() default ColumnMetadataFormat.DEFAULT;
 	
 	/**
-	 * Alinhamento em que os dados ser„o exibidos
+	 * Alinhamento em que os dados ser√£o exibidos
 	 * @return
 	 */
 	public ColumnMetadataAlign align() default ColumnMetadataAlign.LEFT;

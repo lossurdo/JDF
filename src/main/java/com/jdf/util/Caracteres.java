@@ -1,16 +1,16 @@
 package com.jdf.util;
 
 /**
- * Classe utilitária para tratamento de Strings 
+ * Classe utilitÃ¡ria para tratamento de Strings 
  * @author lossurdo
  * @since 20/04/2009
  */
 public final class Caracteres {
 
 	/**
-	 * Adiciona zeros antes de um número
+	 * Adiciona zeros antes de um nÃºmero
 	 * @param value Valor
-	 * @param numberOfZeros Número de casas a utilizar
+	 * @param numberOfZeros NÃºmero de casas a utilizar
 	 * @return
 	 */
 	public static final String strzero(int value, int numberOfZeros) {
@@ -21,7 +21,7 @@ public final class Caracteres {
 	}
 
 	/**
-	 * Adiciona um zero antes de um número
+	 * Adiciona um zero antes de um nÃºmero
 	 * @param value Valor
 	 * @return
 	 */

@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 import com.jdf.util.Image2Base64;
 
 /**
- * Referência à imagens default do framework em base 64
+ * ReferÃªncia Ã  imagens default do framework em base 64
  * @author lossurdo
  * @since 20/04/2009
  */

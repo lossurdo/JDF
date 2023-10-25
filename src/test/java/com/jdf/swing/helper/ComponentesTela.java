@@ -37,7 +37,7 @@ public class ComponentesTela extends javax.swing.JFrame {
         jfh.setTitle(Propriedades.getInstance().get("sistema.titulo"));
         jfh.centerFrame();
         
-        // formata botıes
+        // formata bot√µes
         JButtonHelper jbh1 = new JButtonHelper(btnVisualizaCombo);
         jbh1.setIcon(IconPackBase64.BUG);
         JButtonHelper jbh2 = new JButtonHelper(btnVisualizaListSimples);
@@ -47,7 +47,7 @@ public class ComponentesTela extends javax.swing.JFrame {
         List<Aluno> alunos = new ArrayList<Aluno>();
         alunos.add(new Aluno(1,"Rafael Lossurdo"));
         alunos.add(new Aluno(2,"Queisi Oliveira"));
-        alunos.add(new Aluno(3,"Jo„o da Silva"));
+        alunos.add(new Aluno(3,"Jo√£o da Silva"));
         List<Aluno> alunos2 = new ArrayList<Aluno>();
         alunos2.add(new Aluno(4,"Ana Maria"));
         alunos2.add(new Aluno(2,"Carlos Eduardo"));
@@ -67,7 +67,7 @@ public class ComponentesTela extends javax.swing.JFrame {
         jlhComplexo.setModelRight(alunos2);
         jlhComplexo.applyListeners();
         
-        // modifica Ìcone dos botıes n:n
+        // modifica √≠cone dos bot√µes n:n
         new JButtonHelper(btnTodosDir).setIcon(IconPackBase64.ARROW_TURN_RIGHT);
         new JButtonHelper(btnTodosEsq).setIcon(IconPackBase64.ARROW_TURN_LEFT);
         new JButtonHelper(btnDir).setIcon(IconPackBase64.ARROW_RIGHT);

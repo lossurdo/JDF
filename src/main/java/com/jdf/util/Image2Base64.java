@@ -24,7 +24,7 @@ public final class Image2Base64 {
 	/**
 	 * Converte imagem para String Base64
 	 * @param file Arquivo imagem a ser convertido
-	 * @return String Base64 da convers„o
+	 * @return String Base64 da convers√£o
 	 * @throws Exception
 	 */
 	public static String toString(File file) throws Exception {

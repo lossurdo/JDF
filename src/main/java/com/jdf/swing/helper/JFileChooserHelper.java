@@ -22,7 +22,7 @@ public final class JFileChooserHelper {
 		UIManager.put("FileChooser.fileNameLabelMnemonic", "N");
 		UIManager.put("FileChooser.filesOfTypeLabelText", "Arquivos do tipo:");
 		UIManager.put("FileChooser.filesOfTypeLabelMnemonic", "t");
-		UIManager.put("FileChooser.upFolderToolTipText", "Um Nível Acima");
+		UIManager.put("FileChooser.upFolderToolTipText", "Um NÃ­vel Acima");
 		UIManager.put("FileChooser.upFolderAccessibleName", "Para Cima");
 		UIManager.put("FileChooser.homeFolderToolTipText", "Inicio");
 		UIManager.put("FileChooser.homeFolderAccessibleName", "Inicio");
@@ -50,14 +50,14 @@ public final class JFileChooserHelper {
 	}
 
 	/**
-	 * Construtor JFileChooser padrão
+	 * Construtor JFileChooser padrÃ£o
 	 */
 	public JFileChooserHelper() {
 		this(new JFileChooser());
 	}
 	
 	/**
-	 * Referência do objeto JFileChooser, caso necessário
+	 * ReferÃªncia do objeto JFileChooser, caso necessÃ¡rio
 	 * @return
 	 */
 	public JFileChooser getFileChooser() {

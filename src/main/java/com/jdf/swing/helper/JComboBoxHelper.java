@@ -6,7 +6,7 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 
 /**
- * Classe auxiliar para criação do objeto combobox
+ * Classe auxiliar para criaÃ§Ã£o do objeto combobox
  * 
  * @author lossurdo
  * @since 01/03/2009

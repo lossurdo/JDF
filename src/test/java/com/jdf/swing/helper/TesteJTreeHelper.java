@@ -22,7 +22,7 @@ public class TesteJTreeHelper extends javax.swing.JFrame {
         tree = new JTreeHelper<Aluno>(arvore, "Cliente");
         tree.addNode(new Aluno(1,"Classe A")).addSubnode(new Aluno(2,"Rafael")).addSubnode(new Aluno(1,"Pedro"));
         tree.addNode(new Aluno(1,"Classe B")).addSubnode(new Aluno(2,"Ana")).addSubnode(new Aluno(1,"Maria"));
-        tree.addNode(new Aluno(1,"Classe C")).addSubnode(new Aluno(2,"Gabriela")).addNode(new Aluno(1,"Jo„o"), true).addSubnode(new Aluno(1,"JosÈ"));
+        tree.addNode(new Aluno(1,"Classe C")).addSubnode(new Aluno(2,"Gabriela")).addNode(new Aluno(1,"Jo√£o"), true).addSubnode(new Aluno(1,"Jos√©"));
         tree.setAllOpened();
         tree.setDoubleClickAction(this, "imprimeClicado");
     }

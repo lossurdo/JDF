@@ -6,7 +6,7 @@ import javax.swing.ComboBoxModel;
 import javax.swing.event.ListDataListener;
 
 /**
- * Classe respons·vel pela estrutura de dados utilizada pelo componente
+ * Classe respons√°vel pela estrutura de dados utilizada pelo componente
  * JComboBoxHelper
  * 
  * @author lossurdo

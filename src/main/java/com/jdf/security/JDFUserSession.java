@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 /**
- * Sess„o de singleton para usu·rio logado na ferramenta
+ * Sess√£o de singleton para usu√°rio logado na ferramenta
  * @author rafael-lossurdo
  * @since 22/04/2009
  */
@@ -15,7 +15,7 @@ public final class JDFUserSession {
 	private static Properties prop;
 
 	/**
-	 * Inst‚ncia singleton
+	 * Inst√¢ncia singleton
 	 * @return
 	 */
 	public static JDFUserSession getInstance() {
@@ -41,7 +41,7 @@ public final class JDFUserSession {
 	public boolean verifyPermission(String object, String action) {
 		if (object == null || action == null || object.equals("")
 				|| action.equals("")) {
-			throw new RuntimeException("Objeto/AÁ„o nulo ou vazio");
+			throw new RuntimeException("Objeto/A√ß√£o nulo ou vazio");
 		}
 
 		String pesq = object + "-" + action;

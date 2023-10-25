@@ -3,7 +3,7 @@ package com.jdf.swing.helper;
 import javax.swing.JMenuBar;
 
 /**
- * Classe auxiliar para criação do objeto JMenuBar
+ * Classe auxiliar para criaÃ§Ã£o do objeto JMenuBar
  * @author lossurdo
  * @since 24/03/2009
  */
