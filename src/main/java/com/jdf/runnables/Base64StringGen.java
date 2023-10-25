@@ -17,74 +17,75 @@ import com.jdf.util.Image2Base64;
 
 /**
  * Programa gerador de String Base64
+ *
  * @author lossurdo
  * @since 20/04/2009
  */
 final class Base64StringGen extends javax.swing.JFrame implements ClipboardOwner {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	public Base64StringGen() {
-		initComponents();
+    public Base64StringGen() {
+        initComponents();
 
-		JFrameHelper jfh = new JFrameHelper(this);
-		jfh.setIcon(IconPackBase64.APPLICATION);
-		jfh.setBigSize();
-		jfh.setExitOnClose();
-		jfh.setTitle("JDF - Gerador de String Base64");
-		jfh.centerFrame();
-	}
+        JFrameHelper jfh = new JFrameHelper(this);
+        jfh.setIcon(IconPackBase64.APPLICATION);
+        jfh.setBigSize();
+        jfh.setExitOnClose();
+        jfh.setTitle("JDF - Gerador de String Base64");
+        jfh.centerFrame();
+    }
 
-	protected void openDialog() {
-		JFileChooserHelper fch = new JFileChooserHelper();		
-		fch.setFileSelectionMode(JFileChooser.FILES_ONLY);
-		fch.setApproveButtonText("Converter");
-		fch.setDialogTitle("Selecione o arquivo a converter");
-		int v = fch.showOpenDialog(this);
-		if (v != 0) {
-			System.exit(0);
-		}
-		file = fch.getSelectedFile();
-		gerar(file);
-	}
+    protected void openDialog() {
+        JFileChooserHelper fch = new JFileChooserHelper();
+        fch.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        fch.setApproveButtonText("Converter");
+        fch.setDialogTitle("Selecione o arquivo a converter");
+        int v = fch.showOpenDialog(this);
+        if (v != 0) {
+            System.exit(0);
+        }
+        file = fch.getSelectedFile();
+        gerar(file);
+    }
 
-	private void gerar(final File file) {
-		new Thread() {
-			@Override
-			public void run() {
-				String txt;
-				try {
-					txt = Image2Base64.toString(file);
-				} catch (Exception e) {
-					JOptionPaneHelper.error(e);
-					throw new RuntimeException(e);
-				}
-				
-				String novoTxt = txt;			
-				if(sbCheckbox.isSelected()) {
-					novoTxt = novoTxt.replaceAll("\r\n", "\");\r\narquivoBase64.append(\"");
-					novoTxt = "arquivoBase64.append(\"" + novoTxt.substring(0, novoTxt.length()-25);
-					novoTxt += ";";
-					novoTxt = "StringBuilder arquivoBase64 = new StringBuilder();\r\n" + novoTxt; 
-					txtCode.setText(novoTxt);
-				} else {
-					txtCode.setText(txt);
-				}		
-				
-				setClipboardContents(txtCode.getText());
-				JOptionPaneHelper.simpleMessage("Texto colocado na área de transferência");
-			}
-		}.start();
-	}
+    private void gerar(final File file) {
+        new Thread() {
+            @Override
+            public void run() {
+                String txt;
+                try {
+                    txt = Image2Base64.toString(file);
+                } catch (Exception e) {
+                    JOptionPaneHelper.error(e);
+                    throw new RuntimeException(e);
+                }
+
+                String novoTxt = txt;
+                if (sbCheckbox.isSelected()) {
+                    novoTxt = novoTxt.replaceAll("\r\n", "\");\r\narquivoBase64.append(\"");
+                    novoTxt = "arquivoBase64.append(\"" + novoTxt.substring(0, novoTxt.length() - 25);
+                    novoTxt += ";";
+                    novoTxt = "StringBuilder arquivoBase64 = new StringBuilder();\r\n" + novoTxt;
+                    txtCode.setText(novoTxt);
+                } else {
+                    txtCode.setText(txt);
+                }
+
+                setClipboardContents(txtCode.getText());
+                JOptionPaneHelper.simpleMessage("Texto colocado na área de transferência");
+            }
+        }.start();
+    }
 
     private void setClipboardContents(String txt) {
-		StringSelection stringSelection = new StringSelection(txt);
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		clipboard.setContents(stringSelection, this);
-	}
-    
-	@SuppressWarnings("unchecked")
-	// <editor-fold defaultstate="collapsed"
+        StringSelection stringSelection = new StringSelection(txt);
+        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+        clipboard.setContents(stringSelection, this);
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed"
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -133,18 +134,18 @@ final class Base64StringGen extends javax.swing.JFrame implements ClipboardOwner
     }// </editor-fold>//GEN-END:initComponents
 
     private void sbCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sbCheckboxActionPerformed
-		gerar(file);
+        gerar(file);
     }//GEN-LAST:event_sbCheckboxActionPerformed
 
-	public static void main(String args[]) {
-		java.awt.EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				Base64StringGen x = new Base64StringGen();
-				x.setVisible(true); 
-				x.openDialog();
-			}
-		});
-	}
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                Base64StringGen x = new Base64StringGen();
+                x.setVisible(true);
+                x.openDialog();
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
@@ -153,8 +154,8 @@ final class Base64StringGen extends javax.swing.JFrame implements ClipboardOwner
     // End of variables declaration//GEN-END:variables
 	private File file;
 
-	@Override
-	public void lostOwnership(Clipboard arg0, Transferable arg1) {
-	}
+    @Override
+    public void lostOwnership(Clipboard arg0, Transferable arg1) {
+    }
 
 }

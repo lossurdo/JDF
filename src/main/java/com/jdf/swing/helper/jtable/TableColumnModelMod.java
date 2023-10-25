@@ -7,18 +7,20 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.TableColumn;
 
 /**
- * Classe utilizada para configurar as características das colunas
- * adicionadas em um componente JTable
+ * Classe utilizada para configurar as características das colunas adicionadas
+ * em um componente JTable
+ *
  * @author lossurdo
  * @since 22/03/2009
  */
-@SuppressWarnings({"serial","unchecked"})
+@SuppressWarnings({"serial", "unchecked"})
 class TableColumnModelMod extends DefaultTableColumnModel {
 
-	private Collection collection;
+    private Collection collection;
 
     /**
      * Construtor
+     *
      * @param list Listagem
      */
     public TableColumnModelMod(Collection list) {
@@ -27,15 +29,16 @@ class TableColumnModelMod extends DefaultTableColumnModel {
     }
 
     /**
-     * Método utilizado para controlar a largura
-     * das colunas adicionadas no componente JTable
+     * Método utilizado para controlar a largura das colunas adicionadas no
+     * componente JTable
+     *
      * @param tc
      */
     @Override
     public void addColumn(TableColumn tc) {
-    	if (collection.size() == 0) {
-			return;
-		}
+        if (collection.size() == 0) {
+            return;
+        }
         String hv = tc.getHeaderValue().toString();
         for (Object obj : collection) {
             Field[] attr = obj.getClass().getDeclaredFields();

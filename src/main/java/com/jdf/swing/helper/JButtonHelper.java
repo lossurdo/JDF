@@ -1,7 +1,5 @@
 package com.jdf.swing.helper;
 
-import com.jdf.security.JDFSecurity;
-import com.jdf.security.JDFUserSession;
 import com.jdf.swing.iface.IconPackBase64;
 import com.jdf.swing.iface.ImageReaderBase64;
 import com.jdf.util.Caracteres;
@@ -23,7 +21,7 @@ import javax.swing.JFrame;
  * @author lossurdo
  * @since 01/03/2009
  */
-public class JButtonHelper implements IconSets, JDFSecurity {
+public class JButtonHelper implements IconSets {
 
     private JButton button;
     private Date date;
@@ -41,12 +39,6 @@ public class JButtonHelper implements IconSets, JDFSecurity {
      */
     public JButtonHelper(JButton btn) {
         this.button = btn;
-    }
-
-    public void verifyPermission(String object, String action) {
-        if (!JDFUserSession.getInstance().verifyPermission(object, action)) {
-            this.button.setEnabled(false);
-        }
     }
 
     /**

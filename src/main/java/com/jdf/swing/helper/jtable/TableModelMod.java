@@ -14,8 +14,8 @@ import javax.swing.table.TableModel;
 import com.jdf.util.UtilMethod;
 
 /**
- * Classe utilizada para representar os dados
- * inserido em componentes JTable
+ * Classe utilizada para representar os dados inserido em componentes JTable
+ *
  * @author lossurdo
  * @since 22/03/2009
  */
@@ -29,6 +29,7 @@ class TableModelMod implements TableModel {
 
     /**
      * Construtor
+     *
      * @param list Listagem
      */
     public TableModelMod(Collection list) {
@@ -43,7 +44,7 @@ class TableModelMod implements TableModel {
                 Field[] attr = obj.getClass().getDeclaredFields();
 
                 for (Field f : attr) {
-                    if(JTableAssist.isAnnotated(f)) {
+                    if (JTableAssist.isAnnotated(f)) {
                         columns.add("get" + JTableAssist.capitalize(f.getName()));
                         columnHeader.add(JTableAssist.getColumnHeaderName(f));
                         columnFormat.add(JTableAssist.getColumnFormat(f));
@@ -85,72 +86,75 @@ class TableModelMod implements TableModel {
         List lista = new ArrayList(collection);
         Object obj = lista.get(rowIndex);
         Object ret = UtilMethod.executeMethod(obj, columns.get(columnIndex));
-        
-        if(columnFormat.get(columnIndex).equals(ColumnMetadataFormat.CURRENCY)) {
-        	return NumberFormat.getCurrencyInstance().format(new Double((Double) ret)); 
-        } else if(columnFormat.get(columnIndex).equals(ColumnMetadataFormat.DATE_DD_MM_YYYY)) {
-        	validateDateField(ret);
-        	Calendar cal = Calendar.getInstance();
-        	setDateCalendar(ret, cal);
-        	return cal.get(Calendar.DAY_OF_MONTH) + "/"
-					+ formatSingleNumber(cal.get(Calendar.MONTH)) + "/"
-					+ cal.get(Calendar.YEAR);
-        } else if(columnFormat.get(columnIndex).equals(ColumnMetadataFormat.DATE_DD_MM_YYYY_HH_MM)) {
-        	validateDateField(ret);
-        	Calendar cal = Calendar.getInstance();
-        	setDateCalendar(ret, cal);
-        	return cal.get(Calendar.DAY_OF_MONTH) + "/"
-					+ formatSingleNumber(cal.get(Calendar.MONTH)) + "/"
-					+ cal.get(Calendar.YEAR) + " " + 
-					formatSingleNumber(cal.get(Calendar.HOUR_OF_DAY)) + ":" + 
-					formatSingleNumber(cal.get(Calendar.MINUTE));
-        } else if(columnFormat.get(columnIndex).equals(ColumnMetadataFormat.DATE_MM_YYYY)) {
-        	validateDateField(ret);
-        	Calendar cal = Calendar.getInstance();
-        	setDateCalendar(ret, cal);
-        	return formatSingleNumber(cal.get(Calendar.MONTH)) + "/"
-					+ cal.get(Calendar.YEAR);
+
+        if (columnFormat.get(columnIndex).equals(ColumnMetadataFormat.CURRENCY)) {
+            return NumberFormat.getCurrencyInstance().format((Double) ret);
+        } else if (columnFormat.get(columnIndex).equals(ColumnMetadataFormat.DATE_DD_MM_YYYY)) {
+            validateDateField(ret);
+            Calendar cal = Calendar.getInstance();
+            setDateCalendar(ret, cal);
+            return cal.get(Calendar.DAY_OF_MONTH) + "/"
+                    + formatSingleNumber(cal.get(Calendar.MONTH)) + "/"
+                    + cal.get(Calendar.YEAR);
+        } else if (columnFormat.get(columnIndex).equals(ColumnMetadataFormat.DATE_DD_MM_YYYY_HH_MM)) {
+            validateDateField(ret);
+            Calendar cal = Calendar.getInstance();
+            setDateCalendar(ret, cal);
+            return cal.get(Calendar.DAY_OF_MONTH) + "/"
+                    + formatSingleNumber(cal.get(Calendar.MONTH)) + "/"
+                    + cal.get(Calendar.YEAR) + " "
+                    + formatSingleNumber(cal.get(Calendar.HOUR_OF_DAY)) + ":"
+                    + formatSingleNumber(cal.get(Calendar.MINUTE));
+        } else if (columnFormat.get(columnIndex).equals(ColumnMetadataFormat.DATE_MM_YYYY)) {
+            validateDateField(ret);
+            Calendar cal = Calendar.getInstance();
+            setDateCalendar(ret, cal);
+            return formatSingleNumber(cal.get(Calendar.MONTH)) + "/"
+                    + cal.get(Calendar.YEAR);
         } else { // DEFAULT        
-        	return ret;
+            return ret;
         }
     }
 
     /**
      * Formata número, adicionando zero (ex. 9 para 09)
+     *
      * @param number
      * @return
      */
     private String formatSingleNumber(int number) {
-    	number++;
-    	if(number<10) {
-    		return "0"+number; 
-    	} else {
-    		return ""+number;
-    	}
+        number++;
+        if (number < 10) {
+            return "0" + number;
+        } else {
+            return "" + number;
+        }
     }
-    
+
     /**
      * Verifica o tipo de data passada (Date ou Calendar) e faz o casting
+     *
      * @param ret Objeto a ser testado
      * @param cal Calendar
      */
-	private void setDateCalendar(Object ret, Calendar cal) {
-		if(ret instanceof Date) {
-			cal.setTime((Date) ret);
-		} else {
-			cal.setTime(((Calendar) ret).getTime());
-		}
-	}
+    private void setDateCalendar(Object ret, Calendar cal) {
+        if (ret instanceof Date) {
+            cal.setTime((Date) ret);
+        } else {
+            cal.setTime(((Calendar) ret).getTime());
+        }
+    }
 
-	/**
-	 * Valida se objeto passível de retorno é do tipo Date ou Calendar
-	 * @param ret
-	 */
-	private void validateDateField(Object ret) {
-		if(!(ret instanceof Date) && !(ret instanceof Calendar)) {
-			throw new RuntimeException("Informado formato de data para campo diferente de Date e Calendar");
-		}
-	}
+    /**
+     * Valida se objeto passível de retorno é do tipo Date ou Calendar
+     *
+     * @param ret
+     */
+    private void validateDateField(Object ret) {
+        if (!(ret instanceof Date) && !(ret instanceof Calendar)) {
+            throw new RuntimeException("Informado formato de data para campo diferente de Date e Calendar");
+        }
+    }
 
     /**
      * NÃO IMPLEMENTADO

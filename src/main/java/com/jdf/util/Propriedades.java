@@ -2,7 +2,7 @@ package com.jdf.util;
 
 import java.io.FileInputStream;
 import java.util.Properties;
-import org.apache.log4j.Logger;
+import java.util.logging.Logger;
 
 /**
  * Exemplo do Design Pattern: Singleton
@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
  */
 public class Propriedades {
 
-    private static final Logger logger = Logger.getLogger(Propriedades.class);
+    private static final Logger logger = Logger.getLogger(Propriedades.class.getName());
     private static Properties prop = null;
 
     private Propriedades() {
@@ -20,21 +20,21 @@ public class Propriedades {
         try {
             // TENTATIVA 1
             prop.load(this.getClass().getClassLoader().getResourceAsStream("/propriedades.properties"));
-            logger.debug("Arquivo propriedades.properties lido com sucesso");
+            logger.info("Arquivo propriedades.properties lido com sucesso");
         } catch (Exception e1) {
             try {
                 // TENTATIVA 2
                 prop.load(this.getClass().getClassLoader().getResourceAsStream("propriedades.properties"));
-                logger.debug("Arquivo propriedades.properties lido com sucesso");
+                logger.info("Arquivo propriedades.properties lido com sucesso");
             } catch (Exception e) {
                 try {
                     // TENTATIVA 3
                     String propFile = System.getProperty("prop");
-                    logger.debug("Lendo arquivo propriedades.properties: " + System.getProperty("prop"));
+                    logger.info("Lendo arquivo propriedades.properties: " + System.getProperty("prop"));
                     FileInputStream fileInputStream = new FileInputStream(propFile);
                     prop.load(fileInputStream);
                     fileInputStream.close();
-                    logger.debug("Arquivo propriedades.properties lido com sucesso");
+                    logger.info("Arquivo propriedades.properties lido com sucesso");
                 } catch (Exception e3) {
                     throw new RuntimeException("Erro ao carregar arquivo de propriedades", e3);
                 }
@@ -47,6 +47,7 @@ public class Propriedades {
     }
 
     private static class PropriedadeHolder {
+
         private static final Propriedades INSTANCE = new Propriedades();
     }
 

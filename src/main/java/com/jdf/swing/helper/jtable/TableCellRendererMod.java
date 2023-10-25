@@ -12,27 +12,28 @@ import javax.swing.table.DefaultTableCellRenderer;
 /**
  * Classe utilizada para formatar a exibição de dados em uma listagem para o
  * componente JTable
- * 
+ *
  * @author lossurdo
  * @since 22/03/2009
  */
-@SuppressWarnings( { "unchecked" })
+@SuppressWarnings({"unchecked"})
 class TableCellRendererMod extends DefaultTableCellRenderer {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private Collection collection;
-	private List<ColumnMetadataAlign> columns;
+    private Collection collection;
+    private List<ColumnMetadataAlign> columns;
 
-	/**
-	 * Construtor
-	 * @param list
-	 * @param highlight Diferenciação entre as linhas exibidas
-	 */
-	public TableCellRendererMod(Collection list, Boolean highlight) {
-		super();
-		this.collection = list;
-		
+    /**
+     * Construtor
+     *
+     * @param list
+     * @param highlight Diferenciação entre as linhas exibidas
+     */
+    public TableCellRendererMod(Collection list, Boolean highlight) {
+        super();
+        this.collection = list;
+
         columns = new ArrayList<ColumnMetadataAlign>();
 
         if (collection != null && collection.size() > 0) {
@@ -40,7 +41,7 @@ class TableCellRendererMod extends DefaultTableCellRenderer {
                 Field[] attr = obj.getClass().getDeclaredFields();
 
                 for (Field f : attr) {
-                    if(JTableAssist.isAnnotated(f)) {
+                    if (JTableAssist.isAnnotated(f)) {
                         columns.add(JTableAssist.getColumnAlign(f));
                     }
                 }
@@ -48,29 +49,33 @@ class TableCellRendererMod extends DefaultTableCellRenderer {
                 break;
             }
         }
-	}
-	
-	/**
-	 * Construtor
-	 * @param list
-	 */
-	public TableCellRendererMod(Collection list) {
-		this(list, false);
-	}
+    }
 
-	@Override
-	public Component getTableCellRendererComponent(JTable table, Object value,
-			boolean isSelected, boolean hasFocus, int row, int column) {
+    /**
+     * Construtor
+     *
+     * @param list
+     */
+    public TableCellRendererMod(Collection list) {
+        this(list, false);
+    }
 
-		// controle de alinhamento das colunas
-		if(columns.get(column).equals(ColumnMetadataAlign.CENTER))
-			setHorizontalAlignment(CENTER);
-		if(columns.get(column).equals(ColumnMetadataAlign.LEFT))
-			setHorizontalAlignment(LEFT);
-		if(columns.get(column).equals(ColumnMetadataAlign.RIGHT))
-			setHorizontalAlignment(RIGHT);
+    @Override
+    public Component getTableCellRendererComponent(JTable table, Object value,
+            boolean isSelected, boolean hasFocus, int row, int column) {
 
-		return super.getTableCellRendererComponent(table, value, isSelected,
-				hasFocus, row, column);
-	}
+        // controle de alinhamento das colunas
+        if (columns.get(column).equals(ColumnMetadataAlign.CENTER)) {
+            setHorizontalAlignment(CENTER);
+        }
+        if (columns.get(column).equals(ColumnMetadataAlign.LEFT)) {
+            setHorizontalAlignment(LEFT);
+        }
+        if (columns.get(column).equals(ColumnMetadataAlign.RIGHT)) {
+            setHorizontalAlignment(RIGHT);
+        }
+
+        return super.getTableCellRendererComponent(table, value, isSelected,
+                hasFocus, row, column);
+    }
 }

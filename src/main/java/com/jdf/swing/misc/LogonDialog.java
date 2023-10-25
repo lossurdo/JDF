@@ -16,17 +16,19 @@ import javax.swing.JPanel;
 
 /**
  * Tela padrão para logon no sistema
+ *
  * @author lossurdo
  * @since 20/04/2009
  */
 public class LogonDialog extends javax.swing.JDialog {
 
     private static final long serialVersionUID = 1L;
-	private Object object;
-	private String action;
+    private Object object;
+    private String action;
 
     /**
      * Construtor
+     *
      * @param object Objeto que contém a ação a ser executada
      * @param action Ação a ser executada
      */
@@ -46,45 +48,46 @@ public class LogonDialog extends javax.swing.JDialog {
 
         // adiciona painel de login
         JPanel painelBG = new JPanel() {
-			private static final long serialVersionUID = 1L;
-			@Override
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				g.drawImage(JDFDefaultImages.getLoginBackground().getImage(), 0, 0, this);
-			}
+            private static final long serialVersionUID = 1L;
+
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(JDFDefaultImages.getLoginBackground().getImage(), 0, 0, this);
+            }
         };
         painelBG.setLayout(new BorderLayout());
-        painelBG.add(painelLogin, BorderLayout.CENTER);        
+        painelBG.add(painelLogin, BorderLayout.CENTER);
         add(painelBG, BorderLayout.CENTER);
-        
+
         // adiciona listener de janela
         addWindowListener(new LogonWindowListener());
     }
-    
+
     /**
-     * Chama método que efetua logon 
+     * Chama método que efetua logon
      */
     private void doLogon() {
-    	if(username.getText().equals("") || new String(password.getPassword()).equals("")) {
-    		JOptionPaneHelper.error("Usuário e/ou senha inválidos");
-    		username.requestFocus();
-    	} else {
-    		try {
-    			Class<?> clazz = object.getClass();
-    			Method m = clazz.getDeclaredMethod(action, String.class, String.class);
-    			m.invoke(object, username.getText(), new String(password.getPassword()));
-    		} catch (InvocationTargetException e) {
-    			JOptionPaneHelper.error(e.getTargetException());
-    			username.requestFocus();
-    			username.setSelectionStart(0);
-    			username.setSelectionEnd(username.getText().length());
-    		} catch (Exception e) {    			
-    			e.printStackTrace();
-    			JOptionPaneHelper.error(e);
-    		}
-    	}
+        if (username.getText().equals("") || new String(password.getPassword()).equals("")) {
+            JOptionPaneHelper.error("Usuário e/ou senha inválidos");
+            username.requestFocus();
+        } else {
+            try {
+                Class<?> clazz = object.getClass();
+                Method m = clazz.getDeclaredMethod(action, String.class, String.class);
+                m.invoke(object, username.getText(), new String(password.getPassword()));
+            } catch (InvocationTargetException e) {
+                JOptionPaneHelper.error(e.getTargetException());
+                username.requestFocus();
+                username.setSelectionStart(0);
+                username.setSelectionEnd(username.getText().length());
+            } catch (Exception e) {
+                e.printStackTrace();
+                JOptionPaneHelper.error(e);
+            }
+        }
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -167,45 +170,48 @@ public class LogonDialog extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLogonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogonActionPerformed
-    	doLogon();
+        doLogon();
     }//GEN-LAST:event_btnLogonActionPerformed
 
     private void usernameKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_usernameKeyTyped
-    	if(evt.getKeyChar() == '\n') {
-        	password.requestFocus();
-        	password.setSelectionStart(0);
-        	password.setSelectionEnd(new String(password.getPassword()).length());
-    	}
+        if (evt.getKeyChar() == '\n') {
+            password.requestFocus();
+            password.setSelectionStart(0);
+            password.setSelectionEnd(new String(password.getPassword()).length());
+        }
     }//GEN-LAST:event_usernameKeyTyped
 
     private void passwordKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_passwordKeyTyped
-    	if(evt.getKeyChar() == '\n')
-        	doLogon();
+        if (evt.getKeyChar() == '\n') {
+            doLogon();
+        }
     }//GEN-LAST:event_passwordKeyTyped
 
     private void btnLogonKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnLogonKeyTyped
-    	if(evt.getKeyChar() == '\n')
-        	doLogon();
+        if (evt.getKeyChar() == '\n') {
+            doLogon();
+        }
     }//GEN-LAST:event_btnLogonKeyTyped
 
     public static void main(String args[]) {
-    	new LogonDialog(new LogonDialog(null,null), "teste").setVisible(true);
-	}
+        new LogonDialog(new LogonDialog(null, null), "teste").setVisible(true);
+    }
 
     /**
      * Exemplo de autenticação
+     *
      * @param u
      * @param p
      */
     private void teste(String u, String p) {
-    	if("admin".equals(u) && "admin".equals(p)) {
-    		JOptionPaneHelper.simpleMessage("Senha correta!");
-    		System.exit(0);
-    	} else {
-    		throw new JDFMessageException("Erro na validação do usuário e senha");
-    	}
+        if ("admin".equals(u) && "admin".equals(p)) {
+            JOptionPaneHelper.simpleMessage("Senha correta!");
+            System.exit(0);
+        } else {
+            throw new JDFMessageException("Erro na validação do usuário e senha");
+        }
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogon;
     private javax.swing.JLabel jLabel1;
@@ -217,39 +223,40 @@ public class LogonDialog extends javax.swing.JDialog {
 }
 
 /**
- * Listener de janela para controlar quando a mesma for encerrada/fechada 
+ * Listener de janela para controlar quando a mesma for encerrada/fechada
+ *
  * @author lossurdo
  * @since 20/04/2009
  */
 class LogonWindowListener implements WindowListener {
 
-	@Override
-	public void windowActivated(WindowEvent e) {
-	}
+    @Override
+    public void windowActivated(WindowEvent e) {
+    }
 
-	@Override
-	public void windowClosed(WindowEvent e) {
-		System.exit(0);
-	}
+    @Override
+    public void windowClosed(WindowEvent e) {
+        System.exit(0);
+    }
 
-	@Override
-	public void windowClosing(WindowEvent e) {
-	}
+    @Override
+    public void windowClosing(WindowEvent e) {
+    }
 
-	@Override
-	public void windowDeactivated(WindowEvent e) {
-	}
+    @Override
+    public void windowDeactivated(WindowEvent e) {
+    }
 
-	@Override
-	public void windowDeiconified(WindowEvent e) {
-	}
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+    }
 
-	@Override
-	public void windowIconified(WindowEvent e) {
-	}
+    @Override
+    public void windowIconified(WindowEvent e) {
+    }
 
-	@Override
-	public void windowOpened(WindowEvent e) {
-	}
-	
+    @Override
+    public void windowOpened(WindowEvent e) {
+    }
+
 }

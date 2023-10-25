@@ -8,6 +8,7 @@ import com.jdf.swing.iface.JDFMessageException;
 
 /**
  * Classe auxiliar para objetos JTable
+ *
  * @author lossurdo
  * @since 22/03/2009
  * @param <T> ED a ser listado no componente JTable
@@ -19,6 +20,7 @@ public class JTableHelper<T> {
 
     /**
      * Construtor
+     *
      * @param table
      */
     public JTableHelper(JTable table) {
@@ -27,6 +29,7 @@ public class JTableHelper<T> {
 
     /**
      * Seta a lista padrão
+     *
      * @param list
      */
     public void setModel(List<T> list) {
@@ -36,15 +39,16 @@ public class JTableHelper<T> {
         table.setSelectionModel(new ListSelectionModelMod(list));
         table.setDefaultRenderer(Object.class, new TableCellRendererMod(list));
     }
-    
+
     /**
      * Devolve o ED selecionado no JTable
+     *
      * @return ED
      */
     public T getSelectedObject() {
-    	if(!table.getSelectionModel().isSelectionEmpty()) {
-    		return sourceList.get(table.getSelectionModel().getLeadSelectionIndex());
-    	}
-		throw new JDFMessageException("Nenhuma linha selecionada"); 
+        if (!table.getSelectionModel().isSelectionEmpty()) {
+            return sourceList.get(table.getSelectionModel().getLeadSelectionIndex());
+        }
+        throw new JDFMessageException("Nenhuma linha selecionada");
     }
 }

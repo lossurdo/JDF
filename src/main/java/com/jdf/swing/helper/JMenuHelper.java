@@ -15,142 +15,156 @@ import com.jdf.util.UtilMethod;
 
 /**
  * Classe auxiliar para criação do objeto JMenu
+ *
  * @author lossurdo
  * @since 24/03/2009
  */
 public class JMenuHelper {
 
-	private JMenu menu;
+    private JMenu menu;
 
-	/**
-	 * Construtor
-	 * @param m
-	 */
-	public JMenuHelper(JMenu m) {
-		this.menu = m;
-	}
+    /**
+     * Construtor
+     *
+     * @param m
+     */
+    public JMenuHelper(JMenu m) {
+        this.menu = m;
+    }
 
-	/**
-	 * 
-	 * @param actionObject
-	 * @param action
-	 * @param item
-	 * @return
-	 */
-	public JMenuHelper addCheckbox(final Object actionObject, final String action, String item) {
-		return addCheckbox(actionObject, action, item, null);
-	}
-	
-	/**
-	 * 
-	 * @param actionObject
-	 * @param action
-	 * @param item
-	 * @param icon
-	 * @return
-	 */
-	public JMenuHelper addCheckbox(final Object actionObject, final String action, String item, IconPackBase64 icon) {
-		JCheckBoxMenuItem i = new JCheckBoxMenuItem(item);
+    /**
+     *
+     * @param actionObject
+     * @param action
+     * @param item
+     * @return
+     */
+    public JMenuHelper addCheckbox(final Object actionObject, final String action, String item) {
+        return addCheckbox(actionObject, action, item, null);
+    }
 
-		if (icon != null)
-			i.setIcon(new ImageReaderBase64(icon).toImage());
+    /**
+     *
+     * @param actionObject
+     * @param action
+     * @param item
+     * @param icon
+     * @return
+     */
+    public JMenuHelper addCheckbox(final Object actionObject, final String action, String item, IconPackBase64 icon) {
+        JCheckBoxMenuItem i = new JCheckBoxMenuItem(item);
 
-		if (actionObject != null && action != null) {
-			i.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					UtilMethod.executeMethod(actionObject, action);
-				}
-			});
-		}
+        if (icon != null) {
+            i.setIcon(new ImageReaderBase64(icon).toImage());
+        }
 
-		menu.add(i);
-		return this;
-	}
-	
-	/**
-	 * Adiciona um item ao menu
-	 * @param actionObject Objeto que contém a ação a ser executada no momento do clique
-	 * @param action Ação a ser executada no momento do clique
-	 * @param item Texto a ser apresentado na tela
-	 * @param icon Ícone
-	 * @param shortcut Atalho ao item
-	 * @return Este objeto que permitirá adicionar mais itens
-	 */
-	public JMenuHelper addItem(Object actionObject, String action, String item,
-			IconPackBase64 icon, Shortcut shortcut) {
-		return addItem(actionObject, action, item, icon, shortcut, null);
-	}
+        if (actionObject != null && action != null) {
+            i.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    UtilMethod.executeMethod(actionObject, action);
+                }
+            });
+        }
 
-	/**
-	 * Adiciona um item ao menu
-	 * @param actionObject Objeto que contém a ação a ser executada no momento do clique
-	 * @param action Ação a ser executada no momento do clique
-	 * @param item Texto a ser apresentado na tela
-	 * @param icon Ícone
-	 * @return Este objeto que permitirá adicionar mais itens
-	 */
-	public JMenuHelper addItem(Object actionObject, String action, String item,
-			IconPackBase64 icon) {
-		return addItem(actionObject, action, item, icon, Shortcut.DEFAULT,
-				null);
-	}
+        menu.add(i);
+        return this;
+    }
 
-	/**
-	 * Adiciona um item ao menu
-	 * @param actionObject Objeto que contém a ação a ser executada no momento do clique
-	 * @param action Ação a ser executada no momento do clique
-	 * @param item Texto a ser apresentado na tela
-	 * @return Este objeto que permitirá adicionar mais itens
-	 */
-	public JMenuHelper addItem(Object actionObject, String action, String item) {
-		return addItem(actionObject, action, item, null, Shortcut.DEFAULT,
-				null);
-	}
+    /**
+     * Adiciona um item ao menu
+     *
+     * @param actionObject Objeto que contém a ação a ser executada no momento
+     * do clique
+     * @param action Ação a ser executada no momento do clique
+     * @param item Texto a ser apresentado na tela
+     * @param icon Ícone
+     * @param shortcut Atalho ao item
+     * @return Este objeto que permitirá adicionar mais itens
+     */
+    public JMenuHelper addItem(Object actionObject, String action, String item,
+            IconPackBase64 icon, Shortcut shortcut) {
+        return addItem(actionObject, action, item, icon, shortcut, null);
+    }
 
-	/**
-	 * Adiciona um item ao menu
-	 * @param actionObject Objeto que contém a ação a ser executada no momento do clique
-	 * @param action Ação a ser executada no momento do clique
-	 * @param item Texto a ser apresentado na tela
-	 * @param icon Ícone
-	 * @param shortcut Atalho ao item
-	 * @param mneumonic Tecla de atalho ao item
-	 * @return Este objeto que permitirá adicionar mais itens
-	 */
-	public JMenuHelper addItem(final Object actionObject, final String action,
-			String item, IconPackBase64 icon, Shortcut shortcut,
-			Character mneumonic) {
+    /**
+     * Adiciona um item ao menu
+     *
+     * @param actionObject Objeto que contém a ação a ser executada no momento
+     * do clique
+     * @param action Ação a ser executada no momento do clique
+     * @param item Texto a ser apresentado na tela
+     * @param icon Ícone
+     * @return Este objeto que permitirá adicionar mais itens
+     */
+    public JMenuHelper addItem(Object actionObject, String action, String item,
+            IconPackBase64 icon) {
+        return addItem(actionObject, action, item, icon, Shortcut.DEFAULT,
+                null);
+    }
 
-		JMenuItem i = new JMenuItem(item);
+    /**
+     * Adiciona um item ao menu
+     *
+     * @param actionObject Objeto que contém a ação a ser executada no momento
+     * do clique
+     * @param action Ação a ser executada no momento do clique
+     * @param item Texto a ser apresentado na tela
+     * @return Este objeto que permitirá adicionar mais itens
+     */
+    public JMenuHelper addItem(Object actionObject, String action, String item) {
+        return addItem(actionObject, action, item, null, Shortcut.DEFAULT,
+                null);
+    }
 
-		if (mneumonic != null)
-			i.setMnemonic(mneumonic);
+    /**
+     * Adiciona um item ao menu
+     *
+     * @param actionObject Objeto que contém a ação a ser executada no momento
+     * do clique
+     * @param action Ação a ser executada no momento do clique
+     * @param item Texto a ser apresentado na tela
+     * @param icon Ícone
+     * @param shortcut Atalho ao item
+     * @param mneumonic Tecla de atalho ao item
+     * @return Este objeto que permitirá adicionar mais itens
+     */
+    public JMenuHelper addItem(final Object actionObject, final String action,
+            String item, IconPackBase64 icon, Shortcut shortcut,
+            Character mneumonic) {
 
-		if (icon != null)
-			i.setIcon(new ImageReaderBase64(icon).toImage());
+        JMenuItem i = new JMenuItem(item);
 
-		i.setAccelerator(KeyStroke.getKeyStroke(shortcut.toString()));
+        if (mneumonic != null) {
+            i.setMnemonic(mneumonic);
+        }
 
-		if (actionObject != null && action != null) {
-			i.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					UtilMethod.executeMethod(actionObject, action);
-				}
-			});
-		}
+        if (icon != null) {
+            i.setIcon(new ImageReaderBase64(icon).toImage());
+        }
 
-		menu.add(i);
-		return this;
-	}
+        i.setAccelerator(KeyStroke.getKeyStroke(shortcut.toString()));
 
-	/**
-	 * Adiciona um separador entre os itens do menu
-	 * @return Este objeto que permitirá adicionar mais itens
-	 */
-	public JMenuHelper addSeparator() {
-		menu.addSeparator();
-		return this;
-	}
+        if (actionObject != null && action != null) {
+            i.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    UtilMethod.executeMethod(actionObject, action);
+                }
+            });
+        }
+
+        menu.add(i);
+        return this;
+    }
+
+    /**
+     * Adiciona um separador entre os itens do menu
+     *
+     * @return Este objeto que permitirá adicionar mais itens
+     */
+    public JMenuHelper addSeparator() {
+        menu.addSeparator();
+        return this;
+    }
 }

@@ -5,18 +5,19 @@ import java.util.Collection;
 import javax.swing.DefaultListSelectionModel;
 
 /**
- * Classe utilizada para configurar características
- * de seleção para o componente JTable 
+ * Classe utilizada para configurar características de seleção para o componente
+ * JTable
+ *
  * @author lossurdo
  * @since 22/03/2009
  */
-@SuppressWarnings({"serial","unchecked"})
+@SuppressWarnings({"serial", "unchecked"})
 class ListSelectionModelMod extends DefaultListSelectionModel {
 
 //    private Collection collection;
-
     /**
      * Construtor
+     *
      * @param list Listagem a ser exibida
      */
     public ListSelectionModelMod(Collection list) {

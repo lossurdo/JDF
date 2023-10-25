@@ -11,19 +11,21 @@ import com.jdf.util.Caracteres;
 
 /**
  * Janela para escolha de uma hora
+ *
  * @author lossurdo
  * @since 19/04/2009
  */
 class TimeChooser extends JDialog {
 
-	private static final long serialVersionUID = 1L;
-	private Date date;
+    private static final long serialVersionUID = 1L;
+    private Date date;
 
-	/**
-	 * Construtor
-	 * @param frame
-	 */
-	public TimeChooser(JFrame frame) {
+    /**
+     * Construtor
+     *
+     * @param frame
+     */
+    public TimeChooser(JFrame frame) {
         super(frame, true);
         setTitle("Selecione a hora");
         initComponents();
@@ -32,35 +34,37 @@ class TimeChooser extends JDialog {
         sliderHora.setMajorTickSpacing(6);
         configSlider(sliderMinuto);
         sliderMinuto.setMajorTickSpacing(10);
-        
+
         setLocationRelativeTo(null);
     }
 
-	/**
-	 * Abre seletor de horário
-	 * @param date Hora inicial
-	 * @return Hora escolhida
-	 */
-	public Date select(Date date) {
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(date);
-		sliderHora.setValue(cal.get(Calendar.HOUR_OF_DAY));
-		sliderMinuto.setValue(cal.get(Calendar.MINUTE));
-		atualizaHora();
-		setVisible(true);
-		return this.date;
-	}
-	
-	/**
-	 * Configurações básicas do componente de slider
-	 * @param s
-	 */
-	private void configSlider(JSlider s) {
-		s.setPaintLabels(true);
+    /**
+     * Abre seletor de horário
+     *
+     * @param date Hora inicial
+     * @return Hora escolhida
+     */
+    public Date select(Date date) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        sliderHora.setValue(cal.get(Calendar.HOUR_OF_DAY));
+        sliderMinuto.setValue(cal.get(Calendar.MINUTE));
+        atualizaHora();
+        setVisible(true);
+        return this.date;
+    }
+
+    /**
+     * Configurações básicas do componente de slider
+     *
+     * @param s
+     */
+    private void configSlider(JSlider s) {
+        s.setPaintLabels(true);
         s.setPaintTicks(true);
         s.setPaintTrack(true);
         s.setMinorTickSpacing(1);
-	}
+    }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -142,23 +146,23 @@ class TimeChooser extends JDialog {
     }//GEN-LAST:event_sliderMinutoStateChanged
 
     private void btnSelecionaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelecionaActionPerformed
-        setVisible(false);        
-        
+        setVisible(false);
+
     }//GEN-LAST:event_btnSelecionaActionPerformed
 
-	/**
-	 * Atualiza a hora no botão e no atributo a ser devolvido
-	 */
+    /**
+     * Atualiza a hora no botão e no atributo a ser devolvido
+     */
     private void atualizaHora() {
         String h = Caracteres.strzero(sliderHora.getValue());
         String m = Caracteres.strzero(sliderMinuto.getValue());
-        btnSeleciona.setText(h+":"+m);
-        
+        btnSeleciona.setText(h + ":" + m);
+
         Calendar cal = Calendar.getInstance();
         cal.set(Calendar.HOUR_OF_DAY, sliderHora.getValue());
         cal.set(Calendar.MINUTE, sliderMinuto.getValue());
         cal.set(Calendar.SECOND, 0);
-        this.date = cal.getTime(); 
+        this.date = cal.getTime();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
